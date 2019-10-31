@@ -3,7 +3,7 @@ NGX CRUD Playground
 
 > Playground for [ngx-crud](https://github.com/redaxmedia/ngx-crud).
 
-[![Build Status](https://img.shields.io/travis/redaxmedia/ngx-crud-playground.svg)](https://travis-ci.org/redaxmedia/ngx-crud)
+[![Build Status](https://img.shields.io/travis/redaxmedia/ngx-crud-playground.svg)](https://travis-ci.org/redaxmedia/ngx-crud-playground)
 
 
 Installation
@@ -33,4 +33,4 @@ npm start
 Deployment
 ----------
 
-Trigger [Deploy to Heroku](https://heroku.com/deploy?template=https://github.com/redaxmedia/ngx-grud-playground) and fill out the form.
+Trigger [Deploy to Heroku](https://heroku.com/deploy?template=https://github.com/redaxmedia/ngx-crud-playground) and fill out the form.

@@ -1,7 +1,7 @@
 {
 	"name": "ngx-crud-playground",
 	"description": "Playground for ngx-crud",
-	"repository": "https://github.com/redaxmedia/ngx-grud-playground",
+	"repository": "https://github.com/redaxmedia/ngx-crud-playground",
 	"keywords":
 	[
 		"api",
