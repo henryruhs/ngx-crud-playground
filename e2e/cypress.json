@@ -1,6 +1,6 @@
 {
 	"fileServerFolder": "../dist/out-tsc/apps/e2e",
-	"fixturesFolder": "../dist/out-tsc/apps/e2e/src/fixtures",
+	"fixturesFolder": "../dist/out-tsc/apps/e2e/src/fixtures/",
 	"integrationFolder": "../dist/out-tsc/apps/e2e/src",
 	"pluginsFile": false,
 	"supportFile": false,

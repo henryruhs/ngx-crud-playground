@@ -2,8 +2,8 @@ describe('App', () =>
 {
 	before(() => cy.visit('/'));
 
-	it('Should have a joke', () =>
+	it('Should have jokes', () =>
 	{
-		cy.get('[data-e2e="box-joke"]').should('be.visible');
+		cy.get('[data-e2e="box-joke"]').should('have.length', 6);
 	});
 });
