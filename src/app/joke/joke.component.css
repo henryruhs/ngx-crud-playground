@@ -1,0 +1,25 @@
+.box-joke
+{
+	background: #9c27b0;
+	border-radius: 0.25em;
+	color: #fff;
+	display: block;
+	margin: 1em;
+	padding: 1em;
+}
+
+.box-joke.is-fast
+{
+	background: #8bc34a;
+}
+
+.text-joke
+{
+	font-size: 1.25em;
+}
+
+.text-meta
+{
+	font-weight: bold;
+	margin-top: 0.5em;
+}
