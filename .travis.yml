@@ -4,9 +4,7 @@ node_js:
 - 12
 
 cache:
- npm: true
- directories:
- - ~/.cache
+ npm: false
 
 install:
 - npm install
