@@ -16,9 +16,9 @@ export class JokeComponent implements OnInit
 	@Input() public lifetime: number = 1000;
 	@Input() public timeout: number = 0;
 
-	protected startTime: number;
-	protected endTime: number;
-	protected joke: string;
+	public startTime: number;
+	public endTime: number;
+	public joke: string;
 
 	constructor(protected jokeService: JokeService)
 	{

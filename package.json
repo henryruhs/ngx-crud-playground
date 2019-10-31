@@ -25,10 +25,10 @@
 		"type": "git",
 		"url": "https://github.com/redaxmedia/ngx-crud-playground.git"
 	},
-	"scripts":
-	{
+	"scripts": {
 		"start": "ng serve",
 		"build": "ng build",
+		"postinstall": "ng build --prod",
 		"test": "ng test",
 		"lint": "ng lint && stylelint src && ncss-linter",
 		"e2e": "ng e2e"
@@ -63,6 +63,7 @@
 		"@types/jasminewd2": "2.0.8",
 		"@types/node": "12.12.3",
 		"cypress": "3.5.0",
+		"express": "4.17.1",
 		"jasmine-core": "3.5.0",
 		"jasmine-spec-reporter": "4.2.1",
 		"karma": "4.4.1",

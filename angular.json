@@ -4,7 +4,7 @@
 	"newProjectRoot": "projects",
 	"projects":
 	{
-		"ngx-crud-demo":
+		"ngx-crud-playground":
 		{
 			"projectType": "application",
 			"schematics": {},
@@ -18,7 +18,7 @@
 					"builder": "@angular-devkit/build-angular:browser",
 					"options":
 					{
-						"outputPath": "dist/ngx-crud-demo",
+						"outputPath": "dist/ngx-crud-playground",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
@@ -75,13 +75,13 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"options":
 					{
-						"browserTarget": "ngx-crud-demo:build"
+						"browserTarget": "ngx-crud-playground:build"
 					},
 					"configurations":
 					{
 						"production":
 						{
-							"browserTarget": "ngx-crud-demo:build:production"
+							"browserTarget": "ngx-crud-playground:build:production"
 						}
 					}
 				},
@@ -90,7 +90,7 @@
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options":
 					{
-						"browserTarget": "ngx-crud-demo:build"
+						"browserTarget": "ngx-crud-playground:build"
 					}
 				},
 				"test":
@@ -138,18 +138,18 @@
 					{
 						"cypressConfig": "e2e/cypress.json",
 						"tsConfig": "e2e/tsconfig.e2e.json",
-						"devServerTarget": "ngx-crud-demo:serve"
+						"devServerTarget": "ngx-crud-playground:serve"
 					},
 					"configurations":
 					{
 						"production":
 						{
-							"devServerTarget": "ngx-crud-demo:serve:production"
+							"devServerTarget": "ngx-crud-playground:serve:production"
 						}
 					}
 				}
 			}
 		}
 	},
-	"defaultProject": "ngx-crud-demo"
+	"defaultProject": "ngx-crud-playground"
 }

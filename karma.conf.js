@@ -22,7 +22,7 @@ module.exports = config =>
 		},
 		coverageIstanbulReporter:
 		{
-			dir: require('path').join(__dirname, './coverage/ngx-crud-demo'),
+			dir: require('path').join(__dirname, './coverage/ngx-crud-playground'),
 			reports:
 			[
 				'html',
