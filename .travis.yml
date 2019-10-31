@@ -14,3 +14,9 @@ script:
 - npm run build --prod
 - npm test
 - npm run e2e
+
+deploy:
+ provider: heroku
+ app: ngx-crud-playground
+ api_key:
+  secure: fz+ksjr0QT9wA6xy3fOak603DecK0qtoXnp9nLvRuCN0j6ZOkzoMHlyHuqfmouQGCoADBoIxa95XJfw2UdGqduX9gHqIw7Kx8yj9/OljmoFQOVDSAKlUUGH7Lkt1MqQAaNyqFFubNmetaxUaV7x3KAIV2t+xQa7pz0+5MATUxFC2Q3ABbBkUvf3ziiA6udNnOEWRPUkJtlZq+0CIHLKemGUXi990tFUvRXmN8/UnRjfTyZgrN3AIlMXYg+PHxd6nEzLuJjCL1xnCnIas2pJM/mD7pM9qYNPoCiJx1SAhdKsiQvUqz7yo1lwu0fKA052xq0jRzRZe3/+0Jm17obdUZp85JZbh4eX244PSOpfA1AaBuCJeGadIu+aZtTv6g81QYXeS0OZGMZKAruDDROVB9RzfnMN3TxwJP0JuQlbbFo2ytQMtipUVrHnjpICOeLrz9GStqb2Hqq3MfhWXTgnVhSxj7KQV5PefqtC/wu1C0CFSAjZe/7wu/LpI7O97ITWE3vJbmz2WkUVOJbRxghOhyvDO80R0xKC+hyHoDViitT/bH1kmNSmvAukLxbPsbfFOU55KOq6TBV6/7vxrn4n+H7f3QvL+fnYnwAXSnVR8vetEq4tbdaBSNHQbq4X/eu4tO+R6EV6+nOXiI6Ngq2AuDYdwpr0cjIhahORqqIeD/bQ=
