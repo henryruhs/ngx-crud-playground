@@ -44,13 +44,12 @@
 		"@angular/platform-browser": "9.0.0-rc.0",
 		"@angular/platform-browser-dynamic": "9.0.0-rc.0",
 		"@angular/router": "9.0.0-rc.0",
-		"@nrwl/workspace": "8.7.0",
+		"compression": "1.7.4",
 		"express": "4.17.1",
 		"harmonize.css": "2.2.0",
 		"ngx-crud": "3.0.0",
 		"rxjs": "6.5.3",
 		"tslib": "1.10.0",
-		"tslint-config-redaxmedia": "1.4.0",
 		"zone.js": "0.10.2"
 	},
 	"devDependencies":
@@ -61,6 +60,7 @@
 		"@angular/language-service": "9.0.0-rc.0",
 		"@cypress/webpack-preprocessor": "4.1.0",
 		"@nrwl/cypress": "8.7.0",
+		"@nrwl/workspace": "8.7.0",
 		"@types/jasmine": "3.4.5",
 		"@types/jasminewd2": "2.0.8",
 		"@types/node": "12.12.5",
@@ -78,6 +78,7 @@
 		"ts-loader": "6.2.1",
 		"ts-node": "8.4.1",
 		"tslint": "5.20.0",
+		"tslint-config-redaxmedia": "1.4.0",
 		"typescript": "3.6.4"
 	}
 }

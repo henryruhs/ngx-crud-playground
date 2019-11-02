@@ -4,6 +4,7 @@
 	"repository": "https://github.com/redaxmedia/ngx-crud-playground",
 	"keywords":
 	[
+		"angular",
 		"api",
 		"request",
 		"crud",
