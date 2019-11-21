@@ -1,4 +1,4 @@
-describe('App', () =>
+describe('Application', () =>
 {
 	before(() => cy.visit('/'));
 
