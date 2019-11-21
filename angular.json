@@ -123,7 +123,7 @@
 						[
 							"tsconfig.app.json",
 							"tsconfig.spec.json",
-							"e2e/tsconfig.json"
+							"tsconfig.e2e.json"
 						],
 						"exclude":
 						[
