@@ -1,11 +1,10 @@
 {
-	"fileServerFolder": "../dist/out-tsc/apps/e2e",
-	"fixturesFolder": "../dist/out-tsc/apps/e2e/src/fixtures/",
-	"integrationFolder": "../dist/out-tsc/apps/e2e/src",
+	"fileServerFolder": "../out-tsc/e2e",
+	"fixturesFolder": "../out-tsc/e2e/fixtures",
+	"integrationFolder": "../out-tsc/e2e/integration",
+	"videosFolder": "../out-tsc/e2e/videos",
+	"screenshotsFolder": "../out-tsc/e2e/screenshots",
 	"pluginsFile": false,
 	"supportFile": false,
-	"video": false,
-	"videosFolder": "../dist/out-tsc/apps/e2e/videos",
-	"screenshotsFolder": "../dist/out-tsc/apps/e2e/screenshots",
-	"chromeWebSecurity": false
+	"video": false
 }
