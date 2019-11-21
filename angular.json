@@ -137,7 +137,7 @@
 					"options":
 					{
 						"cypressConfig": "e2e/cypress.json",
-						"tsConfig": "e2e/tsconfig.e2e.json",
+						"tsConfig": "tsconfig.e2e.json",
 						"devServerTarget": "ngx-crud-playground:serve"
 					},
 					"configurations":

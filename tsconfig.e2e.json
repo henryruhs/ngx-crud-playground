@@ -3,10 +3,15 @@
 	"compilerOptions":
 	{
 		"sourceMap": false,
-		"outDir": "../dist/out-tsc/apps/e2e/src"
+		"outDir": "./dist/out-tsc/apps/e2e/src",
+		"types":
+		[
+			"cypress",
+			"node"
+		]
 	},
 	"include":
 	[
-		"src/**/*.ts"
+		"e2e/**/*.ts"
 	]
 }
