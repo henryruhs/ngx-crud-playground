@@ -13,23 +13,23 @@ import { JokeService } from './joke.service';
 })
 export class JokeComponent implements OnInit
 {
-	@Input() public lifetime: number = 1000;
-	@Input() public timeout: number = 0;
+	@Input() public lifetime : number = 1000;
+	@Input() public timeout : number = 0;
 
-	public startTime: number;
-	public endTime: number;
-	public joke: string;
+	public startTime : number;
+	public endTime : number;
+	public joke : string;
 
-	constructor(protected jokeService: JokeService)
+	constructor(protected jokeService : JokeService)
 	{
 	}
 
-	public ngOnInit(): void
+	public ngOnInit() : void
 	{
 		this.fetchJoke();
 	}
 
-	protected fetchJoke(): void
+	protected fetchJoke() : void
 	{
 		setTimeout(() =>
 		{
