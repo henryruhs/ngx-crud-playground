@@ -14,7 +14,7 @@ import { JokeService } from './joke.service';
 export class JokeComponent implements OnInit
 {
 	@Input() public lifetime : number = 1000;
-	@Input() public timeout : number = 0;
+	@Input() public delay : number = 0;
 
 	public startTime : number;
 	public endTime : number;
@@ -35,7 +35,6 @@ export class JokeComponent implements OnInit
 		{
 			this.startTime = Date.now();
 			this.jokeService
-				.enableAbort()
 				.enableCache('GET', this.lifetime)
 				.request('GET')
 				.subscribe((joke : JokeInterface) =>
@@ -43,6 +42,6 @@ export class JokeComponent implements OnInit
 					this.joke = joke.value;
 					this.endTime = Date.now();
 				});
-		}, this.timeout);
+		}, this.delay);
 	}
 }
