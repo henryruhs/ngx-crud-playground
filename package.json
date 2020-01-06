@@ -47,7 +47,7 @@
 		"compression": "1.7.4",
 		"express": "4.17.1",
 		"harmonize.css": "2.2.0",
-		"ngx-crud": "4.0.0-beta.3",
+		"ngx-crud": "4.0.0-beta.4",
 		"rxjs": "6.5.4",
 		"tslib": "1.10.0",
 		"zone.js": "0.10.2"
