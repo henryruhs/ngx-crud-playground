@@ -35,7 +35,7 @@ export class JokeComponent implements OnInit
 		{
 			this.startTime = Date.now();
 			this.jokeService
-				.enableAbort()
+				.enableAbort('GET', 2000)
 				.enableCache('GET', this.lifetime)
 				.request('GET')
 				.subscribe((joke : JokeInterface) =>
