@@ -13,12 +13,13 @@ import { JokeService } from './joke.service';
 })
 export class JokeComponent implements OnInit
 {
-	@Input() public lifetime : number = 1000;
 	@Input() public delay : number = 0;
+	@Input() public abortLifetime : number = 1000;
+	@Input() public cacheLifetime : number = 500;
 
+	public joke : string;
 	public startTime : number;
 	public endTime : number;
-	public joke : string;
 
 	constructor(protected jokeService : JokeService)
 	{
@@ -35,8 +36,8 @@ export class JokeComponent implements OnInit
 		{
 			this.startTime = Date.now();
 			this.jokeService
-				.enableAbort('GET', 2000)
-				.enableCache('GET', this.lifetime)
+				.enableAbort('GET', this.abortLifetime)
+				.enableCache('GET', this.cacheLifetime)
 				.request('GET')
 				.subscribe((joke : JokeInterface) =>
 				{
