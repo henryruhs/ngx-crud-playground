@@ -14,7 +14,7 @@ import { JokeService } from './joke.service';
 export class JokeComponent implements OnInit
 {
 	@Input() public delay : number = 0;
-	@Input() public abortLifetime : number = 1000;
+	@Input() public abortLifetime : number = 2000;
 	@Input() public cacheLifetime : number = 500;
 
 	public joke : string;
