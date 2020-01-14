@@ -26,6 +26,8 @@ npm install
 Usage
 -----
 
+Serve local development server:
+
 ```
 npm start
 ```
