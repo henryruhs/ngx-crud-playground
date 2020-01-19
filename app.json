@@ -5,10 +5,9 @@
 	"keywords":
 	[
 		"angular",
-		"api",
-		"request",
+		"http",
 		"crud",
-		"rest",
-		"cache"
+		"aborting",
+		"caching"
 	]
 }
