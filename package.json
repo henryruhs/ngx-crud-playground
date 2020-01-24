@@ -70,7 +70,6 @@
 		"karma-chrome-launcher": "3.1.0",
 		"karma-coverage-istanbul-reporter": "2.1.1",
 		"karma-jasmine": "3.1.0",
-		"karma-jasmine-html-reporter": "1.5.1",
 		"ncss-linter": "5.1.0",
 		"stylelint": "13.0.0",
 		"stylelint-config-redaxmedia": "3.0.0",
