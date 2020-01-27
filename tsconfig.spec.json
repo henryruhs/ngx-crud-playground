@@ -2,8 +2,8 @@
 	"extends": "./tsconfig.json",
 	"compilerOptions":
 	{
-		"target": "es5",
 		"outDir": "./out-tsc/spec",
+		"target": "es5",
 		"types":
 		[
 			"jasmine",
