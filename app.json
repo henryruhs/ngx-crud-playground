@@ -9,5 +9,12 @@
 		"crud",
 		"aborting",
 		"caching"
-	]
+	],
+	"env":
+	{
+		"NODE_MODULES_CACHE":
+		{
+			"value": false
+		}
+	}
 }
