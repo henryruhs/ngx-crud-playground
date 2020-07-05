@@ -1,4 +1,4 @@
 <div class="box-joke" data-e2e="box-joke" *ngIf="endTime" [ngClass]="{ 'is-fast' : endTime - startTime < 10 }">
 	<p class="text-joke">{{ joke }}</p>
-	<p class="text-meta" *ngIf="endTime">{{ endTime - startTime }}s</p>
+	<p class="text-meta" *ngIf="endTime">{{ endTime - startTime }} ms</p>
 </div>

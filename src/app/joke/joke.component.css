@@ -1,9 +1,10 @@
 .box-joke
 {
+	align-items: center;
 	background: #9c27b0;
 	border-radius: 0.25em;
 	color: #fff;
-	display: block;
+	display: flex;
 	margin: 1em;
 	padding: 1em;
 }
@@ -15,11 +16,13 @@
 
 .text-joke
 {
-	font-size: 1.25em;
+	flex-grow: 1;
 }
 
 .text-meta
 {
-	font-weight: 700;
-	margin-top: 0.5em;
+	font-size: 1.25em;
+	min-width: 5em;
+	text-align: right;
+	white-space: nowrap;
 }
