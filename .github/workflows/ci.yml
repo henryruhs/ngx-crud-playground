@@ -8,9 +8,43 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v2
-  - name: Set up Node 15
+  - name: Set up Node 14
     uses: actions/setup-node@v1
     with:
-     node-version: 15
+     node-version: 14
   - run: npm install
   - run: npm run lint
+ build:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+  - name: Set up Node 14
+    uses: actions/setup-node@v1
+    with:
+     node-version: 14
+  - run: npm install
+  - run: npm run build
+ test-unit:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+  - name: Set up Node 14
+    uses: actions/setup-node@v1
+    with:
+     node-version: 14
+  - run: npm install
+  - run: npm run test
+ test-acceptance:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+  - name: Set up Node 14
+    uses: actions/setup-node@v1
+    with:
+     node-version: 14
+  - run: npm install
+  - run: npm run e2e
+
