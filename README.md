@@ -3,7 +3,7 @@ NGX CRUD Playground
 
 > Playground for [ngx-crud](https://github.com/redaxmedia/ngx-crud).
 
-[![Build Status](https://img.shields.io/travis/redaxmedia/ngx-crud-playground.svg)](https://travis-ci.org/redaxmedia/ngx-crud-playground)
+[![Build Status](https://img.shields.io/github/workflow/status/redaxmedia/ngx-crud-playground/ci.svg)](https://github.com/redaxmedia/ngx-crud-playground/actions?query=workflow:ci)
 [![Deploy Heroku](https://img.shields.io/badge/deploy-heroku-7056bf.svg)](https://heroku.com/deploy?template=https://github.com/redaxmedia/ngx-crud-playground)
 [![Playground Heroku](https://img.shields.io/badge/playground-heroku-0088cc.svg)](https://ngx-crud-playground.herokuapp.com)
 
