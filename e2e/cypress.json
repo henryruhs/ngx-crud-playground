@@ -2,9 +2,8 @@
 	"fileServerFolder": "../out-tsc/e2e",
 	"fixturesFolder": "../out-tsc/e2e/fixtures",
 	"integrationFolder": "../out-tsc/e2e/integration",
-	"videosFolder": "../out-tsc/e2e/videos",
 	"screenshotsFolder": "../out-tsc/e2e/screenshots",
+	"videosFolder": "../out-tsc/e2e/videos",
 	"pluginsFile": false,
-	"supportFile": false,
-	"video": false
+	"supportFile": false
 }
