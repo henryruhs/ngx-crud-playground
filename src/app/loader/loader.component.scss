@@ -1,0 +1,50 @@
+.component-loader,
+.component-loader:before
+{
+	bottom: 0;
+	height: 1em;
+	left: 0;
+	position: fixed;
+	right: 0;
+}
+
+.component-loader
+{
+	background: #ce93d8;
+	display: flex;
+	opacity: 0;
+	transition: opacity 0.5s 0.5s;
+
+	&:before
+	{
+		animation: loader 1s infinite;
+		background: #9c27b0;
+		content: '';
+	}
+
+	&.is-loading
+	{
+		opacity: 1;
+	}
+}
+
+@keyframes loader
+{
+	0%
+	{
+		margin-left: 0;
+		margin-right: 100%;
+	}
+
+	50%
+	{
+		margin-left: 25%;
+		margin-right: 0;
+	}
+
+	100%
+	{
+		margin-left: 100%;
+		margin-right: 0;
+	}
+}

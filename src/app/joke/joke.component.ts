@@ -7,7 +7,7 @@ import { JokeService } from './joke.service';
 	selector: 'app-joke',
 	styleUrls:
 	[
-		'./joke.component.css'
+		'./joke.component.scss'
 	],
 	templateUrl: './joke.component.html'
 })
@@ -27,17 +27,13 @@ export class JokeComponent implements OnInit
 
 	public ngOnInit() : void
 	{
-		this.fetchJoke();
-	}
-
-	protected fetchJoke() : void
-	{
 		setTimeout(() =>
 		{
 			this.startTime = Date.now();
 			this.jokeService
 				.enableAbort('GET', this.abortLifetime)
 				.enableCache('GET', this.cacheLifetime)
+				.enableObserve()
 				.request('GET')
 				.subscribe((joke : JokeInterface) =>
 				{

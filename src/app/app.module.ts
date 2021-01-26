@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { JokeComponent } from './joke/joke.component';
+import { LoaderComponent } from './loader/loader.component';
 
 import { JokeService } from './joke/joke.service';
 
@@ -19,6 +20,7 @@ import { JokeService } from './joke/joke.service';
 	declarations:
 	[
 		AppComponent,
+		LoaderComponent,
 		JokeComponent
 	],
 	imports:
