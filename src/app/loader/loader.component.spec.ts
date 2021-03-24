@@ -1,11 +1,11 @@
 import { HttpClientModule } from '@angular/common/http';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CrudModule } from 'ngx-crud';
 import { LoaderComponent } from './loader.component';
 
 describe('LoaderComponent', () =>
 {
-	beforeEach(async(() =>
+	beforeEach(waitForAsync(() =>
 	{
 		TestBed
 			.configureTestingModule(

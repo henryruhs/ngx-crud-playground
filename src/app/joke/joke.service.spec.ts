@@ -1,12 +1,12 @@
 import { HttpClientModule } from '@angular/common/http';
-import { async, inject, TestBed } from '@angular/core/testing';
+import { waitForAsync, inject, TestBed } from '@angular/core/testing';
 import { CrudModule } from 'ngx-crud';
 import { JokeInterface } from './joke.interface';
 import { JokeService } from './joke.service';
 
 describe('JokeService', () =>
 {
-	beforeEach(async(() =>
+	beforeEach(waitForAsync(() =>
 	{
 		TestBed
 			.configureTestingModule(
