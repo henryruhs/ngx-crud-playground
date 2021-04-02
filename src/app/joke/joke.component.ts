@@ -14,8 +14,6 @@ import { JokeService } from './joke.service';
 export class JokeComponent implements OnInit
 {
 	@Input() public delay : number = 0;
-	@Input() public abortLifetime : number = 2000;
-	@Input() public cacheLifetime : number = 500;
 
 	public joke : string;
 	public startTime : number;
@@ -31,9 +29,9 @@ export class JokeComponent implements OnInit
 		{
 			this.startTime = Date.now();
 			this.jokeService
-				.enableAbort('GET', this.abortLifetime)
-				.enableCache('GET', this.cacheLifetime)
-				.enableObserve()
+				.enableAbort('GET', 2000)
+				.enableCache('GET', 500)
+				.enableObserve('ANY', 1000)
 				.request('GET')
 				.subscribe((joke : JokeInterface) =>
 				{
