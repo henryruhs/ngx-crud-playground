@@ -8,5 +8,5 @@ import { environment } from '../../environments/environment';
 export class JokeService extends CrudService<JokeInterface>
 {
 	protected apiUrl : string = environment.apiUrl;
-	protected endpoint : string = environment.routes.joke;
+	protected endpoint : string = environment.apiRoutes.joke;
 }

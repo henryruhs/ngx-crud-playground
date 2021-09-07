@@ -3,9 +3,9 @@ import { EnvironmentInterface } from './environment.interface';
 export const environment : EnvironmentInterface =
 {
 	apiUrl: 'https://api.chucknorris.io',
-	production: true,
-	routes:
+	apiRoutes:
 	{
 		joke: '/jokes/random'
-	}
+	},
+	production: true
 };

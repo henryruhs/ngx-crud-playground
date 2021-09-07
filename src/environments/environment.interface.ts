@@ -1,8 +1,8 @@
 export interface EnvironmentInterface
 {
 	apiUrl : string;
+	apiRoutes : RouteInterface;
 	production : boolean;
-	routes : RouteInterface;
 }
 
 interface RouteInterface
