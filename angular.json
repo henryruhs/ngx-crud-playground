@@ -47,7 +47,6 @@
 							"optimization": true,
 							"outputHashing": "all",
 							"sourceMap": false,
-							"extractCss": true,
 							"namedChunks": false,
 							"aot": true,
 							"extractLicenses": true,
@@ -115,18 +114,13 @@
 				},
 				"lint":
 				{
-					"builder": "@angular-devkit/build-angular:tslint",
+					"builder": "@angular-eslint/builder:lint",
 					"options":
 					{
-						"tsConfig":
+						"lintFilePatterns":
 						[
-							"tsconfig.app.json",
-							"tsconfig.spec.json",
-							"tsconfig.e2e.json"
-						],
-						"exclude":
-						[
-							"**/node_modules/**"
+							"src/**/*.ts",
+							"src/**/*.html"
 						]
 					}
 				},
@@ -150,5 +144,9 @@
 			}
 		}
 	},
-	"defaultProject": "ngx-crud-playground"
+	"defaultProject": "ngx-crud-playground",
+	"cli":
+	{
+		"defaultCollection": "@angular-eslint/schematics"
+	}
 }

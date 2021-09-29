@@ -1,0 +1,57 @@
+{
+	"overrides":
+	[
+		{
+			"files":
+			[
+				"*.ts"
+			],
+			"extends":
+			[
+				"plugin:@angular-eslint/template/process-inline-templates"
+			],
+			"plugins":
+			[
+				"@typescript-eslint/eslint-plugin",
+				"unused-imports"
+			],
+			"rules":
+			{
+				"@typescript-eslint/type-annotation-spacing":
+				[
+					"error",
+					{
+						after: true,
+						before: true
+					}
+				],
+				"arrow-parens":
+				[
+					"error",
+					"as-needed"
+				],
+				"brace-style":
+				[
+					"error",
+					"allman"
+				],
+				"comma-dangle": "error",
+				"comma-spacing": "error",
+				"newline-after-var": "error",
+				"no-var": "error",
+				"object-shorthand": "error",
+				"semi": "error"
+			}
+		},
+		{
+			"files":
+			[
+				"*.html"
+			],
+			"extends":
+			[
+				"plugin:@angular-eslint/template/recommended"
+			]
+		}
+	]
+}
