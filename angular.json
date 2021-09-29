@@ -91,6 +91,18 @@
 						"browserTarget": "ngx-crud-playground:build"
 					}
 				},
+				"lint":
+				{
+					"builder": "@angular-eslint/builder:lint",
+					"options":
+					{
+						"lintFilePatterns":
+						[
+							"src/**/*.ts",
+							"src/**/*.html"
+						]
+					}
+				},
 				"test":
 				{
 					"builder": "@angular-devkit/build-angular:karma",
@@ -112,25 +124,11 @@
 						"scripts": []
 					}
 				},
-				"lint":
-				{
-					"builder": "@angular-eslint/builder:lint",
-					"options":
-					{
-						"lintFilePatterns":
-						[
-							"src/**/*.ts",
-							"src/**/*.html"
-						]
-					}
-				},
 				"e2e":
 				{
-					"builder": "@nrwl/cypress:cypress",
+					"builder": "@cypress/schematic:cypress",
 					"options":
 					{
-						"cypressConfig": "e2e/cypress.json",
-						"tsConfig": "tsconfig.e2e.json",
 						"devServerTarget": "ngx-crud-playground:serve"
 					},
 					"configurations":
