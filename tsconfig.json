@@ -8,10 +8,10 @@
 		"declaration": false,
 		"downlevelIteration": true,
 		"experimentalDecorators": true,
-		"module": "esnext",
+		"module": "es2020",
 		"moduleResolution": "node",
 		"importHelpers": true,
-		"target": "es2015",
+		"target": "es2017",
 		"typeRoots":
 		[
 			"node_modules/@types"
@@ -24,8 +24,9 @@
 	},
 	"angularCompilerOptions":
 	{
-		"enableIvy": true,
-		"fullTemplateTypeCheck": true,
-		"strictInjectionParameters": true
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		"strictInputAccessModifiers": true,
+		"strictTemplates": true
 	}
 }
