@@ -32,7 +32,7 @@ export class JokeComponent implements OnInit
 				.enableAbort('GET', 2000)
 				.enableCache('GET', 500)
 				.enableObserve('ANY', 1000)
-				.request('GET')
+				.request<JokeInterface>('GET')
 				.subscribe((joke : JokeInterface) =>
 				{
 					this.joke = joke.value;
