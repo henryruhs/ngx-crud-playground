@@ -20,6 +20,6 @@ export class LoaderComponent implements OnInit
 
 	public ngOnInit() : void
 	{
-		this.observeService.observeAll().subscribe(isLoading => this.isLoading = isLoading);
+		this.observeService.observeAll().subscribe(state => this.isLoading = state === 'STARTED');
 	}
 }
