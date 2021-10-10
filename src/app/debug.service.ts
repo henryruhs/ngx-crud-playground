@@ -1,20 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpResponse } from '@angular/common/http';
+import { HttpContextToken, HttpRequest, HttpResponse } from '@angular/common/http';
 import { EffectInterface } from 'ngx-crud';
 
 @Injectable()
 export class DebugService implements EffectInterface
 {
-	effect<T>(event : HttpEvent<T>) : void
+	protected defaultContext : number = 0;
+	protected token : HttpContextToken<number> = new HttpContextToken<number>(() => this.defaultContext);
+
+	before<T>(request : HttpRequest<T>) : HttpRequest<T>
 	{
-		if (event instanceof HttpResponse)
+		request.context.set(this.token, Date.now());
+		return request;
+	}
+
+	after<T>(request : HttpRequest<T>, response : HttpResponse<T>) : void
+	{
+		// eslint-disable-next-line no-console
+		console.table(
 		{
-			// eslint-disable-next-line no-console
-			console.table(
-			{
-				status: event.status,
-				url: event.url
-			});
-		}
+			status: response.status,
+			time: Date.now() - request.context.get(this.token),
+			url: response.url
+		});
 	}
 }
