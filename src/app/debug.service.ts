@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpContextToken, HttpRequest, HttpResponse } from '@angular/common/http';
+import { HttpContextToken, HttpErrorResponse, HttpRequest, HttpResponse } from '@angular/common/http';
 import { EffectInterface } from 'ngx-crud';
 
 @Injectable()
@@ -14,7 +14,7 @@ export class DebugService implements EffectInterface
 		return request;
 	}
 
-	after<T>(request : HttpRequest<T>, response : HttpResponse<T>) : void
+	after<T>(request : HttpRequest<T>, response : HttpResponse<T> | HttpErrorResponse) : void
 	{
 		// eslint-disable-next-line no-console
 		console.table(
