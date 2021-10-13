@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpContextToken, HttpErrorResponse, HttpRequest, HttpResponse } from '@angular/common/http';
-import { EffectInterface } from 'ngx-crud';
+import { ObserveEffectInterface } from 'ngx-crud';
 
 @Injectable()
-export class DebugService implements EffectInterface
+export class DebugEffect implements ObserveEffectInterface
 {
 	protected defaultContext : number = 0;
 	protected token : HttpContextToken<number> = new HttpContextToken<number>(() => this.defaultContext);
