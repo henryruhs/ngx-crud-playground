@@ -24,7 +24,7 @@ jobs:
     with:
      node-version: 14
   - run: npm install
-  - run: npm run build
+  - run: npm run build -- --base-href=https://redaxmedia.github.io/ngx-crud-playground
   - name: Upload artifact
     uses: actions/upload-artifact@v2
     with:
