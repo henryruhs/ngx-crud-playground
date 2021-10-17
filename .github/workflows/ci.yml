@@ -25,7 +25,7 @@ jobs:
      node-version: 14
   - run: npm install
   - run: npm run build
-  - name: Upload Artifact
+  - name: Upload artifact
     uses: actions/upload-artifact@v2
     with:
      name: dist
@@ -56,7 +56,9 @@ jobs:
   needs: [ build, test-unit, test-acceptance ]
   runs-on: ubuntu-latest
   steps:
-  - name: Download Artifact
+  - name: Checkout
+    uses: actions/checkout@v2
+  - name: Download artifact
     uses: actions/download-artifact@v2
     with:
      name: dist
@@ -70,6 +72,8 @@ jobs:
   needs: [ build, test-unit, test-acceptance ]
   runs-on: ubuntu-latest
   steps:
+  - name: Checkout
+    uses: actions/checkout@v2
   - name: Deploy to Heroku
     uses: akhileshns/heroku-deploy@v3.6.8
     with:
