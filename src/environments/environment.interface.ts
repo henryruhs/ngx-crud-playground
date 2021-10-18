@@ -1,11 +1,11 @@
-export interface EnvironmentInterface
+export interface Environment
 {
 	apiUrl : string;
-	apiRoutes : RouteInterface;
+	apiRoutes : ApiRoutes;
 	production : boolean;
 }
 
-interface RouteInterface
+interface ApiRoutes
 {
 	[index : string] : string;
 }
