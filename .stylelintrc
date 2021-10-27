@@ -2,5 +2,6 @@
 	"extends":
 	[
 		"stylelint-config-redaxmedia"
-	]
+	],
+	"customSyntax": "postcss-scss"
 }

@@ -48,10 +48,10 @@
 	"devDependencies":
 	{
 		"@angular-devkit/build-angular": "13.0.0-rc.1",
-		"@angular-eslint/builder": "12.5.0",
-		"@angular-eslint/eslint-plugin": "12.5.0",
-		"@angular-eslint/eslint-plugin-template": "12.5.0",
-		"@angular-eslint/template-parser": "12.5.0",
+		"@angular-eslint/builder": "12.6.1",
+		"@angular-eslint/eslint-plugin": "12.6.1",
+		"@angular-eslint/eslint-plugin-template": "12.6.1",
+		"@angular-eslint/template-parser": "12.6.1",
 		"@angular/cli": "13.0.0-rc.1",
 		"@angular/compiler-cli": "13.0.0-rc.1",
 		"@angular/language-service": "13.0.0-rc.1",
@@ -70,6 +70,7 @@
 		"karma-jasmine": "4.0.1",
 		"karma-jasmine-html-reporter": "1.7.0",
 		"ncss-linter": "6.2.0",
+		"postcss-scss": "4.0.1",
 		"stylelint": "14.0.1",
 		"stylelint-config-redaxmedia": "3.1.0",
 		"ts-loader": "9.2.6",
@@ -80,7 +81,7 @@
 	{
 		"start": "ng serve",
 		"build": "ng build --configuration=production",
-		"lint": "ng lint && stylelint src && ncss-linter",
+		"lint": "ng lint && stylelint src/**/*.scss && ncss-linter",
 		"test": "ng test",
 		"e2e": "ng e2e"
 	}
