@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { waitForAsync, inject, TestBed } from '@angular/core/testing';
 import { CrudModule } from 'ngx-crud';
-import { Joke } from './joke.interface';
+import { ResponseBody as Joke } from './joke.interface';
 import { JokeService } from './joke.service';
 
 describe('JokeService', () =>
@@ -31,7 +31,7 @@ describe('JokeService', () =>
 		], (jokeService : JokeService) =>
 		{
 			jokeService
-				.request('GET')
+				.custom('GET')
 				.subscribe((joke : Joke) =>
 				{
 					expect(joke.value).toBeDefined();

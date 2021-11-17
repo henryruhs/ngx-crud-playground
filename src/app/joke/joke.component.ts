@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Joke } from './joke.interface';
+import { ResponseBody as Joke } from './joke.interface';
 import { JokeService } from './joke.service';
 
 @Component(
@@ -32,7 +32,7 @@ export class JokeComponent implements OnInit
 				.enableAbort('GET', 2000)
 				.enableCache('GET', 500)
 				.enableObserve('ANY', 1000)
-				.request<Joke>('GET')
+				.custom('GET')
 				.subscribe((joke : Joke) =>
 				{
 					this.joke = joke.value;
