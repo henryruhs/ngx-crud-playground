@@ -10,7 +10,7 @@
 
 .component-loader
 {
-	background: #ce93d8;
+	background: #111;
 	display: flex;
 	opacity: 0;
 	transition: opacity 0.5s 0.5s;
@@ -18,7 +18,7 @@
 	&:before
 	{
 		animation: loader 1s infinite;
-		background: #9c27b0;
+		background: var(--color-primary);
 		content: '';
 	}
 

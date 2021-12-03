@@ -81,7 +81,8 @@
 	{
 		"start": "ng serve",
 		"build": "ng build --configuration=production",
-		"lint": "ng lint && stylelint src/**/*.scss && ncss-linter",
+		"lint": "ng lint && stylelint src/**/**/*.scss && ncss-linter",
+		"fix": "ng lint --fix && stylelint src/**/**/*.scss --fix",
 		"test": "ng test",
 		"e2e": "ng e2e"
 	}

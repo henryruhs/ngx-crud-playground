@@ -1,0 +1,5 @@
+<ng-container *ngIf="panelConfig">
+	<ng-container *ngFor="let amount of [].constructor(panelConfig.general.amount); let index = index;">
+		<div>{{ index + 1 }}</div>
+	</ng-container>
+</ng-container>

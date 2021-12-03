@@ -1,0 +1,74 @@
+@import '../../styles/variables';
+
+:host
+ {
+	background: #222;
+	color: #aaa;
+	padding: 1em 2em;
+}
+
+label
+{
+	display: flex;
+	font-size: 0.875em;
+	justify-content: space-between;
+	margin-bottom: 1em;
+	margin-top: 2em;
+}
+
+input[type=range]
+{
+	appearance: none;
+	background: transparent;
+	width: 100%;
+
+	&::-webkit-slider-runnable-track
+	{
+		background: linear-gradient(#121212, #181818);
+		border-radius: 0.5em;
+		height: 0.75em;
+		transition: background 0.6s;
+		width: 100%;
+	}
+
+	&:focus::-webkit-slider-runnable-track
+	{
+		background: var(--color-primary);
+	}
+
+	&::-webkit-slider-thumb
+	{
+		appearance: none;
+		background: radial-gradient(#ccc, #eee);
+		border: 0;
+		border-radius: 50%;
+		cursor: move;
+		height: 1.125em;
+		margin-top: -0.25em;
+		width: 1.125em;
+	}
+
+	&::-moz-range-track
+	{
+		background: linear-gradient(#121212, #181818);
+		border-radius: 0.5em;
+		height: 0.75em;
+		transition: background 0.6s;
+		width: 100%;
+	}
+
+	&:focus::-moz-range-track
+	{
+		background: var(--color-primary);
+	}
+
+	&::-moz-range-thumb
+	{
+		background: radial-gradient(#ccc, #eee);
+		border: 0;
+		border-radius: 50%;
+		cursor: move;
+		height: 1.125em;
+		width: 1.125em;
+	}
+}

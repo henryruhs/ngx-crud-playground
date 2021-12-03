@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { PanelStore } from './panel/panel.store';
-import { PanelConfig } from './panel/panel';
+import { PanelStore } from '../panel/panel.store';
+import { PanelConfig } from '../panel/panel';
 
 @Component(
 {
-	selector: 'app-root',
+	selector: 'app-content',
 	styleUrls:
 	[
-		'./app.component.scss'
+		'./content.component.scss'
 	],
-	templateUrl: './app.component.html'
+	templateUrl: './content.component.html'
 })
-export class AppComponent
+export class ContentComponent
 {
 	panelConfig : PanelConfig;
 

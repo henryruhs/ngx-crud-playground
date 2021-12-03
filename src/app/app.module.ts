@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CrudModule, OBSERVE_EFFECT } from 'ngx-crud';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { JokeComponent } from './joke/joke.component';
+
+import { ContentComponent }  from './content/content.component';
+import { PanelComponent } from './panel/panel.component';
 import { LoaderComponent } from './loader/loader.component';
 
-import { JokeService } from './joke/joke.service';
+import { PanelStore } from './panel/panel.store';
 import { DebugEffect } from './debug.effect';
 
 @NgModule(
@@ -21,15 +24,18 @@ import { DebugEffect } from './debug.effect';
 	declarations:
 	[
 		AppComponent,
-		JokeComponent,
+		ContentComponent,
+		PanelComponent,
 		LoaderComponent
 	],
 	imports:
 	[
-		AppRoutingModule,
+		CommonModule,
 		BrowserModule,
 		CrudModule,
-		HttpClientModule
+		HttpClientModule,
+		ReactiveFormsModule,
+		AppRoutingModule
 	],
 	providers:
 	[
@@ -37,7 +43,7 @@ import { DebugEffect } from './debug.effect';
 			provide: OBSERVE_EFFECT,
 			useClass: DebugEffect
 		},
-		JokeService
+		PanelStore
 	]
 })
 export class AppModule
