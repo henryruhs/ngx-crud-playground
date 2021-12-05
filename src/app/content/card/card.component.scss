@@ -2,12 +2,12 @@ div
 {
 	align-items: center;
 	counter-increment: card;
-	color: #aaa;
+	color: #222;
 	cursor: pointer;
-	border: 0.125em dashed;
 	display: flex;
 	font-size: 1.25em;
 	justify-content: center;
+	transition: 0.3s color, 0.3s border-color;
 	padding: 2em;
 
 	&.is-started
@@ -17,7 +17,7 @@ div
 
 	&.is-completed
 	{
-		color: #222;
+		color: #ccc;
 	}
 
 	&.is-errored
