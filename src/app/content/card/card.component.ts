@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CustomService, State } from 'ngx-crud';
+import { CustomService } from 'ngx-crud';
 import { PanelConfig } from '../../panel/panel';
+import { State } from './card.type';
 
 @Component(
 {
@@ -37,6 +38,10 @@ export class CardComponent implements OnInit
 			.enableCache(this.panelConfig.cache.method, this.panelConfig.cache.lifetime)
 			.enableObserve(this.panelConfig.observe.method, this.panelConfig.observe.lifetime)
 			.custom(this.panelConfig.environment.method)
-			.subscribe(() => this.state = 'COMPLETED');
+			.subscribe(
+			{
+				next: () => this.state = 'COMPLETED',
+				error: () => this.state = 'ERRORED'
+			});
 	}
 }
