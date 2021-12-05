@@ -1,20 +1,12 @@
 :host
 {
 	background: #f5f5f5;
+	box-sizing: border-box;
+	counter-reset: card;
 	display: grid;
-	gap: 0.5em;
-	grid-template-areas: revert;
+	gap: 1em;
 	grid-template-columns: repeat(10, 1fr);
-	padding: 0.5em;
-}
-
-div
-{
-	align-items: center;
-	background: #222;
-	color: #aaa;
-	display: flex;
-	font-size: 1.5em;
-	justify-content: center;
-	padding: 2em;
+	grid-template-rows: repeat(10, 1fr);
+	max-height: 100vh;
+	padding: 1em;
 }

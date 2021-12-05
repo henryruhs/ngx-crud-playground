@@ -1,22 +1,24 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { PanelStore } from '../panel/panel.store';
+import { HttpClientModule } from '@angular/common/http';
+import { CrudModule } from 'ngx-crud';
 
-import { ContentComponent } from './content.component';
+import { CardComponent } from './card.component';
 
-describe('ContentComponent', () =>
+describe('CardComponent', () =>
 {
 	beforeEach(waitForAsync(() =>
 	{
 		TestBed
 			.configureTestingModule(
 			{
+				imports:
+				[
+					CrudModule,
+					HttpClientModule
+				],
 				declarations:
 				[
-					ContentComponent
-				],
-				providers:
-				[
-					PanelStore
+					CardComponent
 				]
 			})
 			.compileComponents();
@@ -24,7 +26,7 @@ describe('ContentComponent', () =>
 
 	it('Should create the component', () =>
 	{
-		const fixture : ComponentFixture<ContentComponent> = TestBed.createComponent(ContentComponent);
+		const fixture : ComponentFixture<CardComponent> = TestBed.createComponent(CardComponent);
 		const component : any = fixture.debugElement.componentInstance;
 
 		expect(component).toBeTruthy();

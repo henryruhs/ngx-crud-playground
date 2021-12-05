@@ -4,27 +4,27 @@
 	bottom: 0;
 	height: 1em;
 	left: 0;
-	position: fixed;
+	position: absolute;
 	right: 0;
 }
 
 .component-loader
 {
-	background: #111;
+	background: #222;
 	display: flex;
 	opacity: 0;
-	transition: opacity 0.5s 0.5s;
+	transition: opacity 0.4s 0.4s;
 
-	&:before
-	{
-		animation: loader 1s infinite;
-		background: var(--color-primary);
-		content: '';
-	}
-
-	&.is-loading
+	&.is-started
 	{
 		opacity: 1;
+
+		&:before
+		{
+			animation: loader 1.4s infinite;
+			background: var(--color-primary);
+			content: '';
+		}
 	}
 }
 

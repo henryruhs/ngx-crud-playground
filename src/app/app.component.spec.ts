@@ -7,8 +7,8 @@ import { PanelStore } from './panel/panel.store';
 
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
+import { CardComponent } from './content/card/card.component';
 import { PanelComponent } from './panel/panel.component';
-import { LoaderComponent } from './loader/loader.component';
 
 describe('AppComponent', () =>
 {
@@ -21,8 +21,8 @@ describe('AppComponent', () =>
 				[
 					AppComponent,
 					ContentComponent,
-					PanelComponent,
-					LoaderComponent
+					CardComponent,
+					PanelComponent
 				],
 				imports:
 				[
@@ -38,11 +38,11 @@ describe('AppComponent', () =>
 			.compileComponents();
 	}));
 
-	it('Should create the app', () =>
+	it('Should create the component', () =>
 	{
 		const fixture : ComponentFixture<AppComponent> = TestBed.createComponent(AppComponent);
-		const appComponent : any = fixture.debugElement.componentInstance;
+		const component : any = fixture.debugElement.componentInstance;
 
-		expect(appComponent).toBeTruthy();
+		expect(component).toBeTruthy();
 	});
 });

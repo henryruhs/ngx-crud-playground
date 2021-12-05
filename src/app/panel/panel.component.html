@@ -36,9 +36,18 @@
 		</label>
 		<input type="range" formControlName="lifetime" max="10000" step="100" />
 	</fieldset>
+
+	<fieldset formGroupName="environment">
+		<label>environment.apiUrl</label>
+		<input type="text" formControlName="apiUrl" />
+		<label>environment.apiRoute</label>
+		<input type="text" formControlName="apiRoute" />
+	</fieldset>
 </form>
 
 <ng-template #time let-value="value">
 	<ng-container *ngIf="value > 0">{{ value }} ms</ng-container>
 	<ng-container *ngIf="value === 0">off</ng-container>
 </ng-template>
+
+<app-loader></app-loader>

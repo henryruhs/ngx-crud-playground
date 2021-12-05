@@ -1,0 +1,27 @@
+div
+{
+	align-items: center;
+	counter-increment: card;
+	color: #aaa;
+	cursor: pointer;
+	border: 0.125em dashed;
+	display: flex;
+	font-size: 1.25em;
+	justify-content: center;
+	padding: 2em;
+
+	&.is-started
+	{
+		color: var(--color-primary)
+	}
+
+	&.is-completed
+	{
+		color: #111;
+	}
+
+	&:after
+	{
+		content: counter(card);
+	}
+}

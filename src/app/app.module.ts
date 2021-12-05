@@ -9,8 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ContentComponent }  from './content/content.component';
+import { CardComponent } from './content/card/card.component';
 import { PanelComponent } from './panel/panel.component';
-import { LoaderComponent } from './loader/loader.component';
+import { LoaderComponent } from './panel/loader/loader.component';
 
 import { PanelStore } from './panel/panel.store';
 import { DebugEffect } from './debug.effect';
@@ -25,6 +26,7 @@ import { DebugEffect } from './debug.effect';
 	[
 		AppComponent,
 		ContentComponent,
+		CardComponent,
 		PanelComponent,
 		LoaderComponent
 	],

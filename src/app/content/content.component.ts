@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PanelStore } from '../panel/panel.store';
+
 import { PanelConfig } from '../panel/panel';
 
 @Component(
@@ -17,6 +18,8 @@ export class ContentComponent
 
 	constructor(protected panelStore : PanelStore)
 	{
-		this.panelStore.get().subscribe(panelConfig => this.panelConfig = panelConfig);
+		this.panelStore
+			.get()
+			.subscribe(panelConfig => this.panelConfig = panelConfig);
 	}
 }

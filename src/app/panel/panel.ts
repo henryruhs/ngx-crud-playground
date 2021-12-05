@@ -1,4 +1,4 @@
-import { UniversalMethod } from 'ngx-crud';
+import { Method, UniversalMethod } from 'ngx-crud';
 
 export interface PanelConfig
 {
@@ -6,6 +6,7 @@ export interface PanelConfig
 	abort : Abort;
 	cache : Cache;
 	observe : Observe;
+	environment : Environment;
 }
 
 export interface General
@@ -16,18 +17,25 @@ export interface General
 
 interface Abort
 {
-	method : UniversalMethod;
 	lifetime : number;
+	method : UniversalMethod;
 }
 
 interface Cache
 {
-	method : UniversalMethod;
 	lifetime : number;
+	method : UniversalMethod;
 }
 
 interface Observe
 {
-	method : UniversalMethod;
 	lifetime : number;
+	method : UniversalMethod;
+}
+
+interface Environment
+{
+	apiUrl : string;
+	apiRoute : string;
+	method : Method;
 }

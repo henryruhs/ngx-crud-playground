@@ -1,10 +1,12 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CrudModule } from 'ngx-crud';
 
 import { PanelStore } from './panel.store';
-import { AbortService } from 'ngx-crud';
 
 import { PanelComponent } from './panel.component';
+import { LoaderComponent } from './loader/loader.component';
+
 
 describe('PanelComponent', () =>
 {
@@ -15,26 +17,27 @@ describe('PanelComponent', () =>
 			{
 				declarations:
 				[
-					PanelComponent
+					PanelComponent,
+					LoaderComponent
 				],
 				imports:
 				[
+					CrudModule,
 					ReactiveFormsModule
 				],
 				providers:
 				[
-					AbortService,
 					PanelStore
 				]
 			})
 			.compileComponents();
 	}));
 
-	it('Should create the panel', () =>
+	it('Should create the component', () =>
 	{
 		const fixture : ComponentFixture<PanelComponent> = TestBed.createComponent(PanelComponent);
-		const appComponent : any = fixture.debugElement.componentInstance;
+		const component : any = fixture.debugElement.componentInstance;
 
-		expect(appComponent).toBeTruthy();
+		expect(component).toBeTruthy();
 	});
 });
