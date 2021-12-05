@@ -1,4 +1,6 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { PanelStore } from '../panel/panel.store';
+
 import { ContentComponent } from './content.component';
 
 describe('ContentComponent', () =>
@@ -11,6 +13,10 @@ describe('ContentComponent', () =>
 				declarations:
 				[
 					ContentComponent
+				],
+				providers:
+				[
+					PanelStore
 				]
 			})
 			.compileComponents();

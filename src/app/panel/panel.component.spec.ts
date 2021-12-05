@@ -1,6 +1,9 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
+
 import { PanelStore } from './panel.store';
+import { AbortService } from 'ngx-crud';
+
 import { PanelComponent } from './panel.component';
 
 describe('PanelComponent', () =>
@@ -20,6 +23,7 @@ describe('PanelComponent', () =>
 				],
 				providers:
 				[
+					AbortService,
 					PanelStore
 				]
 			})

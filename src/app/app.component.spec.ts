@@ -2,9 +2,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CrudModule } from 'ngx-crud';
+
+import { PanelStore } from './panel/panel.store';
+
 import { AppComponent } from './app.component';
-import { JokeComponent } from './joke/joke.component';
-import { JokeService } from './joke/joke.service';
+import { ContentComponent } from './content/content.component';
+import { PanelComponent } from './panel/panel.component';
+import { LoaderComponent } from './loader/loader.component';
 
 describe('AppComponent', () =>
 {
@@ -16,7 +20,9 @@ describe('AppComponent', () =>
 				declarations:
 				[
 					AppComponent,
-					JokeComponent
+					ContentComponent,
+					PanelComponent,
+					LoaderComponent
 				],
 				imports:
 				[
@@ -26,7 +32,7 @@ describe('AppComponent', () =>
 				],
 				providers:
 				[
-					JokeService
+					PanelStore
 				]
 			})
 			.compileComponents();
