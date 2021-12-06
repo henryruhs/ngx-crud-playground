@@ -1,6 +1,7 @@
-import { HttpClientModule } from '@angular/common/http';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 import { CrudModule } from 'ngx-crud';
+
 import { LoaderComponent } from './loader.component';
 
 describe('LoaderComponent', () =>
@@ -23,11 +24,11 @@ describe('LoaderComponent', () =>
 			.compileComponents();
 	}));
 
-	it('Should create the loader', () =>
+	it('Should create the component', () =>
 	{
 		const fixture : ComponentFixture<LoaderComponent> = TestBed.createComponent(LoaderComponent);
-		const appComponent : any = fixture.debugElement.componentInstance;
+		const component : any = fixture.debugElement.componentInstance;
 
-		expect(appComponent).toBeTruthy();
+		expect(component).toBeTruthy();
 	});
 });

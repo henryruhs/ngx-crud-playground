@@ -2,9 +2,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CrudModule } from 'ngx-crud';
+
+import { PanelStore } from './panel/panel.store';
+
 import { AppComponent } from './app.component';
-import { JokeComponent } from './joke/joke.component';
-import { JokeService } from './joke/joke.service';
+import { ContentComponent } from './content/content.component';
+import { CardComponent } from './content/card/card.component';
+import { PanelComponent } from './panel/panel.component';
+import { ConsoleStore } from './panel/console/console.store';
 
 describe('AppComponent', () =>
 {
@@ -16,7 +21,9 @@ describe('AppComponent', () =>
 				declarations:
 				[
 					AppComponent,
-					JokeComponent
+					ContentComponent,
+					CardComponent,
+					PanelComponent
 				],
 				imports:
 				[
@@ -26,17 +33,18 @@ describe('AppComponent', () =>
 				],
 				providers:
 				[
-					JokeService
+					ConsoleStore,
+					PanelStore
 				]
 			})
 			.compileComponents();
 	}));
 
-	it('Should create the app', () =>
+	it('Should create the component', () =>
 	{
 		const fixture : ComponentFixture<AppComponent> = TestBed.createComponent(AppComponent);
-		const appComponent : any = fixture.debugElement.componentInstance;
+		const component : any = fixture.debugElement.componentInstance;
 
-		expect(appComponent).toBeTruthy();
+		expect(component).toBeTruthy();
 	});
 });

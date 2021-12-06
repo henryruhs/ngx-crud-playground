@@ -1,0 +1,21 @@
+.component-console
+{
+	background: linear-gradient(#121212, #181818);
+	border-radius: 0.25em;
+	color: #ccc;
+	height: 15em;
+	overflow-x: scroll;
+	padding: 0.5em;
+}
+
+.box-console
+{
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em;
+
+	& + .box-console
+	{
+		margin-top: 0.5em;
+	}
+}

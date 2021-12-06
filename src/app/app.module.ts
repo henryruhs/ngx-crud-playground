@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CrudModule, OBSERVE_EFFECT } from 'ngx-crud';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { JokeComponent } from './joke/joke.component';
-import { LoaderComponent } from './loader/loader.component';
 
-import { JokeService } from './joke/joke.service';
-import { DebugEffect } from './debug.effect';
+import { ContentComponent }  from './content/content.component';
+import { CardComponent } from './content/card/card.component';
+import { PanelComponent } from './panel/panel.component';
+import { ConsoleComponent } from './panel/console/console.component';
+import { LoaderComponent } from './panel/loader/loader.component';
+
+import { PanelStore } from './panel/panel.store';
+import { ConsoleStore } from './panel/console/console.store';
+import { ConsoleEffect } from './panel/console/console.effect';
+
 
 @NgModule(
 {
@@ -21,23 +28,29 @@ import { DebugEffect } from './debug.effect';
 	declarations:
 	[
 		AppComponent,
-		JokeComponent,
+		ContentComponent,
+		CardComponent,
+		PanelComponent,
+		ConsoleComponent,
 		LoaderComponent
 	],
 	imports:
 	[
-		AppRoutingModule,
+		CommonModule,
 		BrowserModule,
 		CrudModule,
-		HttpClientModule
+		HttpClientModule,
+		ReactiveFormsModule,
+		AppRoutingModule
 	],
 	providers:
 	[
 		{
 			provide: OBSERVE_EFFECT,
-			useClass: DebugEffect
+			useClass: ConsoleEffect
 		},
-		JokeService
+		ConsoleStore,
+		PanelStore
 	]
 })
 export class AppModule

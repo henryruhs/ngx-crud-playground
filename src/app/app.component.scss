@@ -1,4 +1,20 @@
 :host
 {
-	font: 1em 'open sans', arial, serif;
+	font: 1em quicksand, arial, serif;
+}
+
+main
+{
+	display: flex;
+	min-height: 100vh;
+
+	& app-content
+	{
+		flex-grow: 1;
+	}
+
+	& app-panel
+	{
+		flex-basis: 30em;
+	}
 }

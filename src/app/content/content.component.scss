@@ -1,0 +1,12 @@
+:host
+{
+	background: #181818;
+	box-sizing: border-box;
+	counter-reset: card;
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+	max-height: 100vh;
+	padding: 1em;
+}
