@@ -14,7 +14,7 @@ describe('ConsoleComponent', () =>
 				[
 					ConsoleComponent
 				],
-				imports:
+				providers:
 				[
 					ConsoleStore
 				]

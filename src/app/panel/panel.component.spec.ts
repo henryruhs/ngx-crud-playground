@@ -3,11 +3,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CrudModule } from 'ngx-crud';
 
 import { PanelStore } from './panel.store';
+import { ConsoleStore } from './console/console.store';
 
 import { PanelComponent } from './panel.component';
 import { ConsoleComponent } from './console/console.component';
 import { LoaderComponent } from './loader/loader.component';
-
 
 describe('PanelComponent', () =>
 {
@@ -29,7 +29,8 @@ describe('PanelComponent', () =>
 				],
 				providers:
 				[
-					PanelStore
+					PanelStore,
+					ConsoleStore
 				]
 			})
 			.compileComponents();
