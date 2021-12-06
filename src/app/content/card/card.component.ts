@@ -28,6 +28,7 @@ export class CardComponent implements OnChanges, OnDestroy
 	ngOnChanges() : void
 	{
 		this.resetState();
+		this.timer.unsubscribe();
 		this.timer = timer(this.panelConfig.general.delay * this.index).subscribe(() => this.load());
 	}
 
