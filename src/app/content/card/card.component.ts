@@ -33,7 +33,10 @@ export class CardComponent implements OnChanges, OnDestroy
 
 	ngOnDestroy() : void
 	{
-		this.timer.unsubscribe();
+		if (this.timer)
+		{
+			this.timer.unsubscribe();
+		}
 	}
 
 	load() : void
