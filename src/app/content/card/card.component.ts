@@ -1,4 +1,5 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy } from '@angular/core';
+import { timer, Subscription } from 'rxjs';
 import { CustomService } from 'ngx-crud';
 import { PanelConfig } from '../../panel/panel.interface';
 import { State } from './card.type';
@@ -12,12 +13,13 @@ import { State } from './card.type';
 	],
 	templateUrl: './card.component.html'
 })
-export class CardComponent implements OnChanges
+export class CardComponent implements OnChanges, OnDestroy
 {
 	@Input() index : number;
 	@Input() panelConfig : PanelConfig;
 
 	state : State;
+	timer : Subscription;
 
 	constructor(protected customService : CustomService<unknown, unknown>)
 	{
@@ -26,7 +28,12 @@ export class CardComponent implements OnChanges
 	ngOnChanges() : void
 	{
 		this.resetState();
-		setTimeout(() => this.load(), this.panelConfig.general.delay * this.index);
+		this.timer = timer(this.panelConfig.general.delay * this.index).subscribe(() => this.load());
+	}
+
+	ngOnDestroy() : void
+	{
+		this.timer.unsubscribe();
 	}
 
 	load() : void

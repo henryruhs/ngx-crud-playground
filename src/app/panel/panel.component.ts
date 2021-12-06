@@ -24,6 +24,12 @@ export class PanelComponent
 	constructor(protected panelStore : PanelStore, protected consoleStore : ConsoleStore)
 	{
 		this.bindForm();
+		this.triggerFormChanged();
+	}
+
+	getValue(path : string) : number
+	{
+		return (this.form.get(path) as AbstractControl).value;
 	}
 
 	protected createForm() : FormGroup<ControlsOf<PanelConfig>>
@@ -76,8 +82,8 @@ export class PanelComponent
 			});
 	}
 
-	getValue(path : string) : number
+	protected triggerFormChanged() : void
 	{
-		return (this.form.get(path) as AbstractControl).value;
+		this.form.updateValueAndValidity();
 	}
 }
