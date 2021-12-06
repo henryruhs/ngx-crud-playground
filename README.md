@@ -4,7 +4,7 @@ NGX CRUD Playground
 > Playground for [ngx-crud](https://github.com/redaxmedia/ngx-crud).
 
 [![Build Status](https://img.shields.io/github/workflow/status/redaxmedia/ngx-crud-playground/ci.svg)](https://github.com/redaxmedia/ngx-crud-playground/actions?query=workflow:ci)
-[![Playground StackBlitz](https://img.shields.io/badge/playground-stackblitz-0088cc.svg)](https://stackblitz.com/github/redaxmedia/ngx-crud-playground)
+[![Playground Next](https://img.shields.io/badge/playground-next-0088cc.svg)](https://playground.ngx-crud.com)
 
 
 Installation
