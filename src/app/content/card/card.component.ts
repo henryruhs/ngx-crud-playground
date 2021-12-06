@@ -19,7 +19,7 @@ export class CardComponent implements OnChanges, OnDestroy
 	@Input() panelConfig : PanelConfig;
 
 	state : State;
-	timer : Subscription;
+	timer : Subscription = new Subscription();
 
 	constructor(protected customService : CustomService<unknown, unknown>)
 	{
@@ -33,10 +33,7 @@ export class CardComponent implements OnChanges, OnDestroy
 
 	ngOnDestroy() : void
 	{
-		if (this.timer)
-		{
-			this.timer.unsubscribe();
-		}
+		this.timer.unsubscribe();
 	}
 
 	load() : void

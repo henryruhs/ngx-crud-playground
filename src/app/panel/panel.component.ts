@@ -39,7 +39,7 @@ export class PanelComponent
 			general : new FormGroup(
 			{
 				amount : new FormControl(20, [ Validators.min(1), Validators.max(100) ]),
-				delay : new FormControl(500, [ Validators.max(10000) ])
+				delay : new FormControl(200, [ Validators.max(10000) ])
 			}),
 			abort : new FormGroup(
 			{
