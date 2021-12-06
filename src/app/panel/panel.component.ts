@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { AbstractControl, Validators } from '@angular/forms';
 import { ControlsOf, FormControl, FormGroup } from '@ngneat/reactive-forms';
-import { PanelConfig } from './panel.interface';
+
 import { PanelStore } from './panel.store';
+import { ConsoleStore } from './console/console.store';
+
+import { PanelConfig } from './panel.interface';
 
 @Component(
 {
@@ -18,7 +21,7 @@ export class PanelComponent
 {
 	form : FormGroup<ControlsOf<PanelConfig>> = this.createForm();
 
-	constructor(protected panelStore : PanelStore)
+	constructor(protected panelStore : PanelStore, protected consoleStore : ConsoleStore)
 	{
 		this.bindForm();
 	}
@@ -68,6 +71,7 @@ export class PanelComponent
 				if (this.form.valid)
 				{
 					this.panelStore.set(panelConfig);
+					this.consoleStore.reset();
 				}
 			});
 	}

@@ -12,6 +12,11 @@ export class ConsoleStore
 		return this.store;
 	}
 
+	reset() : void
+	{
+		this.store.next([]);
+	}
+
 	append(entry : ConsoleEntry) : void
 	{
 		this.store.next(

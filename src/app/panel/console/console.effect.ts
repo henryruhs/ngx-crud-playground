@@ -23,9 +23,9 @@ export class ConsoleEffect implements ObserveBeforeEffect, ObserveAfterEffect
 	{
 		this.consoleStore.append(
 		{
+			url: response.url,
 			status: response.status,
-			time: Date.now() - request.context.get(this.token),
-			url: response.url
+			time: Date.now() - request.context.get(this.token)
 		});
 	}
 }

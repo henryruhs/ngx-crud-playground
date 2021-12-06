@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { CustomService } from 'ngx-crud';
 import { PanelConfig } from '../../panel/panel.interface';
 import { State } from './card.type';
@@ -12,7 +12,7 @@ import { State } from './card.type';
 	],
 	templateUrl: './card.component.html'
 })
-export class CardComponent implements OnInit
+export class CardComponent implements OnChanges
 {
 	@Input() index : number;
 	@Input() panelConfig : PanelConfig;
@@ -23,8 +23,9 @@ export class CardComponent implements OnInit
 	{
 	}
 
-	ngOnInit() : void
+	ngOnChanges() : void
 	{
+		this.resetState();
 		setTimeout(() => this.load(), this.panelConfig.general.delay * this.index);
 	}
 
@@ -43,5 +44,10 @@ export class CardComponent implements OnInit
 				next: () => this.state = 'COMPLETED',
 				error: () => this.state = 'ERRORED'
 			});
+	}
+
+	protected resetState() : void
+	{
+		this.state = null;
 	}
 }
