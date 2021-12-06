@@ -60,7 +60,7 @@ export class PanelComponent
 	{
 		this.form.valueChanges
 			.pipe(
-				debounceTime(2000),
+				debounceTime(1000),
 				distinctUntilChanged()
 			)
 			.subscribe(panelConfig =>

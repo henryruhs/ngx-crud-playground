@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { PanelStore } from '../panel/panel.store';
 
 import { PanelConfig } from '../panel/panel.interface';

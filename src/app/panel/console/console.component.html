@@ -1,5 +1,6 @@
-<div class="component-console">
-	<div class="box-console" *ngFor="let consoleEntry of consoleEntries">
-		<span>GET {{ consoleEntry.status }} {{ consoleEntry.url }}</span> <span>{{ consoleEntry.time }}ms</span>
-	</div>
-</div>
+<ul class="list-console">
+	<li class="item-console" *ngFor="let consoleEntry of consoleEntries">
+		<span>{{ consoleEntry.status }} {{ panelConfig.environment.method }} {{ consoleEntry.url }}</span>
+		<span>{{ consoleEntry.time }} ms</span>
+	</li>
+</ul>

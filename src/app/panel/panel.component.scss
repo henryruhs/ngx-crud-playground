@@ -29,6 +29,7 @@ input[type=text]
 	&.ng-invalid
 	{
 		background: var(--color-error);
+		color: #111;
 	}
 
 	&:not(.ng-invalid):focus

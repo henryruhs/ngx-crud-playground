@@ -1,20 +1,20 @@
-.component-console
+.list-console
 {
 	background: linear-gradient(#121212, #181818);
 	border-radius: 0.25em;
 	color: #ccc;
-	height: 15em;
-	overflow-x: scroll;
+	height: 15.25em;
+	scrollbar-width: thin;
 	padding: 0.5em;
 }
 
-.box-console
+.item-console
 {
 	display: flex;
 	justify-content: space-between;
-	gap: 0.5em;
+	gap: 1em;
 
-	& + .box-console
+	& + .item-console
 	{
 		margin-top: 0.5em;
 	}
