@@ -1,4 +1,4 @@
-<ul class="list-console">
+<ul #list class="list-console" [scrollTop]="list.scrollHeight">
 	<li class="item-console" *ngFor="let consoleEntry of consoleEntries">
 		<span>{{ consoleEntry.status }} {{ panelConfig.environment.method }} {{ consoleEntry.url }}</span>
 		<span>{{ consoleEntry.time }} ms</span>

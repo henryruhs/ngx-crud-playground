@@ -5,7 +5,19 @@
 	color: #ccc;
 	height: 15.25em;
 	overflow-y: scroll;
+	scrollbar-color: var(--color-primary) #121212;
 	padding: 0.5em;
+
+	&::-webkit-scrollbar
+	{
+		background: #121212;
+		width: 0.375em;
+	}
+
+	&::-webkit-scrollbar-thumb
+	{
+		background: var(--color-primary);
+	}
 }
 
 .item-console
