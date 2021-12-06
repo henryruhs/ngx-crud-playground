@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { AbstractControl, Validators } from '@angular/forms';
 import { ControlsOf, FormControl, FormGroup } from '@ngneat/reactive-forms';
-import { PanelConfig } from './panel';
+import { PanelConfig } from './panel.interface';
 import { PanelStore } from './panel.store';
 
 @Component(

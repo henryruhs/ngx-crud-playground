@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './content/card/card.component';
 import { PanelComponent } from './panel/panel.component';
+import { ConsoleStore } from './panel/console/console.store';
 
 describe('AppComponent', () =>
 {
@@ -32,6 +33,7 @@ describe('AppComponent', () =>
 				],
 				providers:
 				[
+					ConsoleStore,
 					PanelStore
 				]
 			})

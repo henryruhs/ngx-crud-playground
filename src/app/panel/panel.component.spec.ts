@@ -5,6 +5,7 @@ import { CrudModule } from 'ngx-crud';
 import { PanelStore } from './panel.store';
 
 import { PanelComponent } from './panel.component';
+import { ConsoleComponent } from './console/console.component';
 import { LoaderComponent } from './loader/loader.component';
 
 
@@ -18,6 +19,7 @@ describe('PanelComponent', () =>
 				declarations:
 				[
 					PanelComponent,
+					ConsoleComponent,
 					LoaderComponent
 				],
 				imports:

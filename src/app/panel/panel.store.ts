@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
-import { PanelConfig } from './panel';
+import { BehaviorSubject } from 'rxjs';
+import { PanelConfig } from './panel.interface';
 
 @Injectable()
 export class PanelStore
 {
-	protected store : Subject<PanelConfig> = new Subject<PanelConfig>();
+	protected store : BehaviorSubject<PanelConfig> = new BehaviorSubject<PanelConfig>(null);
 
-	get() : Subject<PanelConfig>
+	get() : BehaviorSubject<PanelConfig>
 	{
 		return this.store;
 	}

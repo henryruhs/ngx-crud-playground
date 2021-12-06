@@ -1,0 +1,5 @@
+<div class="component-console">
+	<div class="box-console" *ngFor="let consoleEntry of consoleEntries">
+		<span>GET {{ consoleEntry.status }} {{ consoleEntry.url }}</span> <span>{{ consoleEntry.time }}ms</span>
+	</div>
+</div>

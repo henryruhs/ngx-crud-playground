@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CustomService } from 'ngx-crud';
-import { PanelConfig } from '../../panel/panel';
+import { PanelConfig } from '../../panel/panel.interface';
 import { State } from './card.type';
 
 @Component(

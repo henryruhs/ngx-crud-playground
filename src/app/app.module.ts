@@ -11,10 +11,13 @@ import { AppComponent } from './app.component';
 import { ContentComponent }  from './content/content.component';
 import { CardComponent } from './content/card/card.component';
 import { PanelComponent } from './panel/panel.component';
+import { ConsoleComponent } from './panel/console/console.component';
 import { LoaderComponent } from './panel/loader/loader.component';
 
 import { PanelStore } from './panel/panel.store';
-import { DebugEffect } from './debug.effect';
+import { ConsoleStore } from './panel/console/console.store';
+import { ConsoleEffect } from './panel/console/console.effect';
+
 
 @NgModule(
 {
@@ -28,6 +31,7 @@ import { DebugEffect } from './debug.effect';
 		ContentComponent,
 		CardComponent,
 		PanelComponent,
+		ConsoleComponent,
 		LoaderComponent
 	],
 	imports:
@@ -43,8 +47,9 @@ import { DebugEffect } from './debug.effect';
 	[
 		{
 			provide: OBSERVE_EFFECT,
-			useClass: DebugEffect
+			useClass: ConsoleEffect
 		},
+		ConsoleStore,
 		PanelStore
 	]
 })
