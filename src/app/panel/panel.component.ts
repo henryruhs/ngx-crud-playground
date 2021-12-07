@@ -36,7 +36,7 @@ export class PanelComponent
 	{
 		return new FormGroup<ControlsOf<PanelConfig>>(
 		{
-			general : new FormGroup(
+			request : new FormGroup(
 			{
 				amount : new FormControl(20, [ Validators.min(1), Validators.max(100) ]),
 				delay : new FormControl(200, [ Validators.max(10000) ])

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ObserveService, State } from 'ngx-crud';
+import { ObserveService, ObserveStatus } from 'ngx-crud';
 
 @Component(
 {
@@ -12,7 +12,7 @@ import { ObserveService, State } from 'ngx-crud';
 })
 export class LoaderComponent implements OnInit
 {
-	state : State;
+	observeStatus : ObserveStatus;
 
 	constructor(protected observeService : ObserveService)
 	{
@@ -20,6 +20,6 @@ export class LoaderComponent implements OnInit
 
 	ngOnInit() : void
 	{
-		this.observeService.observeAll().subscribe(state => this.state = state);
+		this.observeService.observeAll().subscribe(observeStatus => this.observeStatus = observeStatus);
 	}
 }

@@ -1,14 +1,14 @@
 <form [formGroup]="form">
-	<fieldset formGroupName="general">
+	<fieldset formGroupName="request">
 		<label>
-			<span>general.amount</span>
-			<span>{{ getValue('general.amount')  }}</span>
+			<span>request.amount</span>
+			<span>{{ getValue('request.amount')  }}</span>
 		</label>
 		<input type="range" formControlName="amount" min="1" max="100" />
 
 		<label>
-			<span>general.delay</span>
-			<span [ngTemplateOutlet]="time" [ngTemplateOutletContext]="{ value : getValue('general.delay') }"></span>
+			<span>request.delay</span>
+			<span [ngTemplateOutlet]="time" [ngTemplateOutletContext]="{ value : getValue('request.delay') }"></span>
 		</label>
 		<input type="range" formControlName="delay" max="10000" step="100" />
 	</fieldset>

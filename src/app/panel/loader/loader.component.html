@@ -1,1 +1,4 @@
-<div [class.is-started]="state === 'STARTED'" [class.is-completed]="state === 'COMPLETED'" class="component-loader"></div>
+<div
+	[class.is-started]="observeStatus === 'STARTED'"
+	[class.is-completed]="observeStatus === 'COMPLETED'"
+	class="component-loader"></div>

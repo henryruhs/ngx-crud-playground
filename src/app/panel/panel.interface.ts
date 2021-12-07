@@ -2,14 +2,14 @@ import { Method, UniversalMethod } from 'ngx-crud';
 
 export interface PanelConfig
 {
-	general : General;
+	request : Request;
 	abort : Abort;
 	cache : Cache;
 	observe : Observe;
 	environment : Environment;
 }
 
-export interface General
+export interface Request
 {
 	amount : number;
 	delay : number;

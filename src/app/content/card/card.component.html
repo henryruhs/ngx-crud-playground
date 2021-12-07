@@ -1,5 +1,5 @@
 <div class="component-card"
-	 [class.is-started]="state === 'STARTED'"
-	 [class.is-completed]="state === 'COMPLETED'"
-	 [class.is-errored]="state === 'ERRORED'"
+	 [class.is-started]="requestStatus === 'STARTED'"
+	 [class.is-completed]="requestStatus === 'COMPLETED'"
+	 [class.is-errored]="requestStatus === 'ERRORED'"
 	 (click)="load()"></div>

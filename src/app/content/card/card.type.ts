@@ -1,1 +1,1 @@
-export type State = 'STARTED' | 'COMPLETED' | 'ERRORED';
+export type RequestStatus = 'STARTED' | 'COMPLETED' | 'ERRORED';

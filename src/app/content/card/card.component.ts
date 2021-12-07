@@ -2,7 +2,7 @@ import { Component, Input, OnChanges, OnDestroy } from '@angular/core';
 import { timer, Subscription } from 'rxjs';
 import { CustomService } from 'ngx-crud';
 import { PanelConfig } from '../../panel/panel.interface';
-import { State } from './card.type';
+import { RequestStatus } from './card.type';
 
 @Component(
 {
@@ -18,7 +18,7 @@ export class CardComponent implements OnChanges, OnDestroy
 	@Input() index : number;
 	@Input() panelConfig : PanelConfig;
 
-	state : State;
+	requestStatus : RequestStatus;
 	timer : Subscription = new Subscription();
 
 	constructor(protected customService : CustomService<unknown, unknown>)
@@ -27,19 +27,18 @@ export class CardComponent implements OnChanges, OnDestroy
 
 	ngOnChanges() : void
 	{
-		this.resetState();
-		this.timer.unsubscribe();
-		this.timer = timer(this.panelConfig.general.delay * this.index).subscribe(() => this.load());
+		this.reset();
+		this.timer = timer(this.panelConfig.request.delay * this.index).subscribe(() => this.load());
 	}
 
 	ngOnDestroy() : void
 	{
-		this.timer.unsubscribe();
+		this.reset();
 	}
 
 	load() : void
 	{
-		this.state = 'STARTED';
+		this.requestStatus = 'STARTED';
 		this.customService
 			.setApiUrl(this.panelConfig.environment.apiUrl)
 			.setApiRoute(this.panelConfig.environment.apiRoute)
@@ -49,13 +48,14 @@ export class CardComponent implements OnChanges, OnDestroy
 			.custom(this.panelConfig.environment.method)
 			.subscribe(
 			{
-				next: () => this.state = 'COMPLETED',
-				error: () => this.state = 'ERRORED'
+				next: () => this.requestStatus = 'COMPLETED',
+				error: () => this.requestStatus = 'ERRORED'
 			});
 	}
 
-	protected resetState() : void
+	protected reset() : void
 	{
-		this.state = null;
+		this.requestStatus = null;
+		this.timer.unsubscribe();
 	}
 }

@@ -1,5 +1,5 @@
 <ng-container *ngIf="panelConfig">
-	<ng-container *ngFor="let amount of [].constructor(panelConfig.general.amount); let index = index;">
+	<ng-container *ngFor="let amount of [].constructor(panelConfig.request.amount); let index = index;">
 		<app-card [index]="index" [panelConfig]="panelConfig"></app-card>
 	</ng-container>
 </ng-container>
