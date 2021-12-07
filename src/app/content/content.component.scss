@@ -1,9 +1,49 @@
 :host
 {
 	background: #181818;
-	box-sizing: border-box;
 	counter-reset: card;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
-	grid-template-rows: repeat(auto-fit, 6em);
+}
+
+.wrapper-content
+{
+	scrollbar-color: var(--color-primary) #121212;
+
+	&::-webkit-scrollbar
+	{
+		background: #121212;
+		height: 0.375em;
+	}
+
+	&::-webkit-scrollbar-thumb
+	{
+		background: var(--color-primary);
+	}
+}
+
+@media (max-width: 60em)
+{
+	:host
+	{
+		left: 0;
+		position: sticky;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	.wrapper-content
+	{
+		display: flex;
+		overflow-x: scroll;
+	}
+}
+
+@media (min-width: 60em)
+{
+	.wrapper-content
+	{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+		grid-template-rows: repeat(auto-fit, 6em);
+	}
 }

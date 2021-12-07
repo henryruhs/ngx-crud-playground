@@ -7,7 +7,6 @@ import { ConsoleStore } from './console/console.store';
 
 import { PanelComponent } from './panel.component';
 import { ConsoleComponent } from './console/console.component';
-import { LoaderComponent } from './loader/loader.component';
 
 describe('PanelComponent', () =>
 {
@@ -19,8 +18,7 @@ describe('PanelComponent', () =>
 				declarations:
 				[
 					PanelComponent,
-					ConsoleComponent,
-					LoaderComponent
+					ConsoleComponent
 				],
 				imports:
 				[

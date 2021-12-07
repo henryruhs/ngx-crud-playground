@@ -4,12 +4,13 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { CrudModule } from 'ngx-crud';
 
 import { PanelStore } from './panel/panel.store';
+import { ConsoleStore } from './panel/console/console.store';
 
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './content/card/card.component';
 import { PanelComponent } from './panel/panel.component';
-import { ConsoleStore } from './panel/console/console.store';
+import { LoaderComponent } from './loader/loader.component';
 
 describe('AppComponent', () =>
 {
@@ -23,7 +24,8 @@ describe('AppComponent', () =>
 					AppComponent,
 					ContentComponent,
 					CardComponent,
-					PanelComponent
+					PanelComponent,
+					LoaderComponent
 				],
 				imports:
 				[

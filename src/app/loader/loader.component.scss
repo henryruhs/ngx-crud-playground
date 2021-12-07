@@ -2,15 +2,15 @@
 .component-loader:before
 {
 	bottom: 0;
-	height: 1em;
+	height: 0.375em;
 	left: 0;
-	position: absolute;
+	position: fixed;
 	right: 0;
 }
 
 .component-loader
 {
-	background: #222;
+	background: #121212;
 	display: flex;
 	opacity: 0;
 	transition: opacity 0.4s 0.4s;

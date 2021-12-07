@@ -7,14 +7,33 @@ main
 {
 	display: flex;
 	min-height: 100vh;
+}
 
-	& app-content
+@media (max-width: 60em)
+{
+	main
 	{
-		flex-grow: 1;
+		flex-direction: column;
+
+		& app-panel
+		{
+			flex-grow: 1;
+		}
 	}
+}
 
-	& app-panel
+@media (min-width: 60em)
+{
+	main
 	{
-		flex-basis: 30em;
+		& app-content
+		{
+			flex-grow: 1;
+		}
+
+		& app-panel
+		{
+			flex-basis: 30em;
+		}
 	}
 }
