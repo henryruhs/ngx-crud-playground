@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnDestroy } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, OnDestroy, ViewChild } from '@angular/core';
 import { timer, Subscription } from 'rxjs';
 import { CustomService } from 'ngx-crud';
 import { PanelConfig } from '../../panel/panel.interface';
@@ -17,6 +17,7 @@ export class CardComponent implements OnChanges, OnDestroy
 {
 	@Input() index : number;
 	@Input() panelConfig : PanelConfig;
+	@ViewChild('card') cardElement : ElementRef;
 
 	requestStatus : RequestStatus;
 	timer : Subscription = new Subscription();
@@ -38,6 +39,7 @@ export class CardComponent implements OnChanges, OnDestroy
 
 	load() : void
 	{
+		this.cardElement.nativeElement.scrollIntoView(false);
 		this.requestStatus = 'STARTED';
 		this.customService
 			.setApiUrl(this.panelConfig.environment.apiUrl)

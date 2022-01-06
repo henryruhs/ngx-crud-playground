@@ -1,5 +1,5 @@
 <ng-container *ngIf="panelConfig">
-	<div #wrapper class="wrapper-content" [scrollLeft]="wrapper.scrollWidth">
+	<div class="wrapper-content">
 		<ng-container *ngFor="let amount of [].constructor(panelConfig.request.amount); let index = index;">
 			<app-card [index]="index" [panelConfig]="panelConfig"></app-card>
 		</ng-container>
