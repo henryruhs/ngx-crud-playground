@@ -39,7 +39,7 @@ export class CardComponent implements OnChanges, OnDestroy
 
 	load() : void
 	{
-		this.cardElement.nativeElement.scrollIntoView(false);
+		(this.cardElement.nativeElement as HTMLElement).scrollIntoView(false);
 		this.requestStatus = 'STARTED';
 		this.customService
 			.setApiUrl(this.panelConfig.environment.apiUrl)
