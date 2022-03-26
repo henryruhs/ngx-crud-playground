@@ -18,7 +18,6 @@ import { PanelStore } from './panel/panel.store';
 import { ConsoleStore } from './panel/console/console.store';
 import { ConsoleEffect } from './panel/console/console.effect';
 
-
 @NgModule(
 {
 	bootstrap:
