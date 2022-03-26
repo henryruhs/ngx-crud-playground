@@ -5,7 +5,6 @@ import { ConsoleStore } from './console.store';
 
 import { ConsoleComponent } from './console.component';
 
-
 describe('ConsoleComponent', () =>
 {
 	beforeEach(waitForAsync(() =>
