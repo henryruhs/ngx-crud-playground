@@ -4,7 +4,14 @@
 	[
 		{
 			"use": "@vercel/static",
-			"src": "dist/ngx-crud-playground/**"
+			"src": "dist/ngx-crud-playground/index.html",
+			"config":
+			{
+				"includeFiles":
+				[
+					"dist/ngx-crud-playground/**"
+				]
+			}
 		}
 	],
 	"routes":
