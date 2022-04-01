@@ -13,5 +13,16 @@
 				]
 			}
 		}
+	],
+	"routes":
+	[
+		{
+			"src": "/",
+			"dest": "./dist/ngx-crud-playground/index.html"
+		},
+		{
+			"src": "/(.+)",
+			"dest": "./dist/ngx-crud-playground/$1"
+		}
 	]
 }
