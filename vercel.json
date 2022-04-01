@@ -4,7 +4,7 @@
 	[
 		{
 			"use": "@vercel/static",
-			"src": "./dist/ngx-crud-playground/**"
+			"src": "dist/ngx-crud-playground/**"
 		}
 	]
 }
