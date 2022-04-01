@@ -1,0 +1,21 @@
+{
+	"version": 2,
+	"builds":
+	[
+		{
+			"use": "@vercel/static",
+			"src": "dist/ngx-crud-playground/**"
+		}
+	],
+	"routes":
+	[
+		{
+			"src": "/",
+			"dest": "dist/ngx-crud-playground/index.html"
+		},
+		{
+			"src": "/(.+)",
+			"dest": "dist/ngx-crud-playground/$1"
+		}
+	]
+}
