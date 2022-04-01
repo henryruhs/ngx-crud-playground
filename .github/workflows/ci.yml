@@ -52,7 +52,7 @@ jobs:
      node-version: 14
   - run: npm install
   - run: npm run e2e
- deploy-github:
+ deploy:
   needs: [ build, test-unit, test-acceptance ]
   #if: github.ref == 'refs/heads/master'
   runs-on: ubuntu-latest
@@ -71,3 +71,4 @@ jobs:
      vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
      vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
      vercel-args: --confirm --prod
+     working-directory: ./
