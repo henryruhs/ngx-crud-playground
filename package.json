@@ -55,7 +55,7 @@
 		"@angular/compiler-cli": "13.3.1",
 		"@angular/language-service": "13.3.1",
 		"@cypress/schematic": "1.6.0",
-		"@isnotdefined/eslint-config": "4.5.1",
+		"@isnotdefined/eslint-config": "4.7.0",
 		"@isnotdefined/stylelint-config": "3.2.0",
 		"@types/jasmine": "4.0.2",
 		"@types/jasminewd2": "2.0.10",
