@@ -1,4 +1,9 @@
 export interface Environment
 {
-	production : boolean;
+	metadata :
+	{
+		branch : string;
+		environment : string;
+	},
+	baseUrl : string;
 }

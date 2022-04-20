@@ -2,5 +2,10 @@ import { Environment } from './environment.interface';
 
 export const environment : Environment =
 {
-	production: false
+	metadata:
+	{
+		branch: 'master',
+		environment: 'local'
+	},
+	baseUrl : 'http://localhost:4200'
 };

@@ -2,5 +2,10 @@ import { Environment } from './environment.interface';
 
 export const environment : Environment =
 {
-	production: true
+	metadata:
+	{
+		branch: 'master',
+		environment: 'prod'
+	},
+	baseUrl: 'https://ngx-crud-playground.vercel.app'
 };

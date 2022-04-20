@@ -1,5 +1,4 @@
 {
-	"baseUrl": "http://localhost:4200",
 	"integrationFolder": "cypress/integration",
 	"videosFolder": "cypress/videos",
 	"screenshotsFolder": "cypress/screenshots",

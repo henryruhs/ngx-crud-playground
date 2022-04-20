@@ -7,7 +7,13 @@
 		"ngx-crud-playground":
 		{
 			"projectType": "application",
-			"schematics": {},
+			"schematics":
+			{
+				"@schematics/angular:application":
+				{
+					"strict": true
+				}
+			},
 			"root": "",
 			"sourceRoot": "src",
 			"prefix": "app",
@@ -35,7 +41,10 @@
 					},
 					"configurations":
 					{
-						"production":
+						"local":
+						{
+						},
+						"prod":
 						{
 							"fileReplacements":
 							[
@@ -45,28 +54,16 @@
 								}
 							],
 							"optimization": true,
-							"outputHashing": "all",
 							"sourceMap": false,
 							"namedChunks": false,
 							"aot": true,
 							"extractLicenses": true,
-							"vendorChunk": false,
+							"vendorChunk": true,
 							"buildOptimizer": true,
-							"budgets":
-							[
-								{
-									"type": "initial",
-									"maximumWarning": "2mb",
-									"maximumError": "5mb"
-								},
-								{
-									"type": "anyComponentStyle",
-									"maximumWarning": "6kb",
-									"maximumError": "10kb"
-								}
-							]
+							"outputHashing": "all"
 						}
-					}
+					},
+					"defaultConfiguration": "local"
 				},
 				"serve":
 				{
@@ -77,11 +74,16 @@
 					},
 					"configurations":
 					{
-						"production":
+						"local":
 						{
-							"browserTarget": "ngx-crud-playground:build:production"
+							"browserTarget": "ngx-crud-playground:build:local"
+						},
+						"prod":
+						{
+							"browserTarget": "ngx-crud-playground:build:prod"
 						}
-					}
+					},
+					"defaultConfiguration": "local"
 				},
 				"extract-i18n":
 				{
@@ -115,7 +117,6 @@
 						"karmaConfig": "karma.conf.js",
 						"assets":
 						[
-							"src/favicon.ico",
 							"src/assets"
 						],
 						"styles":
@@ -130,14 +131,8 @@
 					"builder": "@cypress/schematic:cypress",
 					"options":
 					{
-						"devServerTarget": "ngx-crud-playground:serve"
-					},
-					"configurations":
-					{
-						"production":
-						{
-							"devServerTarget": "ngx-crud-playground:serve:production"
-						}
+						"watch": false,
+						"headless": true
 					}
 				}
 			}
