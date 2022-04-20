@@ -1,14 +1,14 @@
 .component-card
 {
 	align-items: center;
-	counter-increment: card;
 	color: #282828;
+	counter-increment: card;
 	cursor: pointer;
 	display: flex;
 	font-size: 1.25em;
 	justify-content: center;
-	transition: 0.3s color, 0.3s border-color;
 	padding: 2em;
+	transition: 0.3s color, 0.3s border-color;
 
 	&.is-started
 	{

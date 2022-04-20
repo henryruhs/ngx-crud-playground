@@ -5,8 +5,8 @@
 	color: #ccc;
 	height: 15.25em;
 	overflow-y: scroll;
-	scrollbar-color: var(--color-primary) #121212;
 	padding: 0.5em;
+	scrollbar-color: var(--color-primary) #121212;
 
 	&::-webkit-scrollbar
 	{
@@ -23,8 +23,8 @@
 .item-console
 {
 	display: flex;
-	justify-content: space-between;
 	gap: 1em;
+	justify-content: space-between;
 
 	& + .item-console
 	{

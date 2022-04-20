@@ -84,12 +84,12 @@
 		"build": "ng build",
 		"build:local": "npm run build -- --configuration=local",
 		"build:prod": "npm run build -- --configuration=prod",
-		"lint": "ng lint && stylelint ./src/**/**/*.scss && ncss-linter",
-		"fix": "ng lint --fix && stylelint ./src/**/**/*.scss --fix",
+		"lint": "ng lint && stylelint ./src/**/**/**/*.scss && ncss-linter",
+		"fix": "ng lint --fix && stylelint ./src/**/**/**/*.scss --fix",
 		"test": "ng test",
 		"e2e": "ng e2e",
-		"e2e:local": "CYPRESS_APP_ENV=local npm run e2e",
-		"e2e:prod": "CYPRESS_APP_ENV=prod npm run e2e",
+		"e2e:local": "cross-env-shell CYPRESS_APP_ENV=local npm run e2e",
+		"e2e:prod": "cross-env-shell CYPRESS_APP_ENV=prod npm run e2e",
 		"wait-for-serve": "wait-on tcp:4200"
 	}
 }

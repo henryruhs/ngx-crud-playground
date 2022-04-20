@@ -5,7 +5,7 @@ const environment : Environment = environmentHelper(Cypress.env('APP_ENV'));
 
 describe('Application', () =>
 {
-	before(() => cy.visit(environment.baseUrl));
+	beforeEach(() => cy.visit(environment.baseUrl));
 
 	it('Should have elements', () =>
 	{
