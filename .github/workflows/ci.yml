@@ -51,7 +51,7 @@ jobs:
     with:
      node-version: 14
   - run: npm install
-  - run: npm run start:local
+  - run: npm run start:local &
   - run: npm run wait-for-serve && npm run e2e:local
  deploy:
   needs: [ build, test-unit, test-acceptance ]
