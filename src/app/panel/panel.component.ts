@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
-import { AbstractControl, Validators } from '@angular/forms';
-import { ControlsOf, FormControl, FormGroup } from '@ngneat/reactive-forms';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { PanelStore } from './panel.store';
 import { ConsoleStore } from './console/console.store';
 
-import { PanelConfig } from './panel.interface';
+import { Method, UniversalMethod } from 'ngx-crud';
+import { PanelConfig, PanelConfigAsControl } from './panel.interface';
 
 @Component(
 {
@@ -19,7 +19,7 @@ import { PanelConfig } from './panel.interface';
 })
 export class PanelComponent
 {
-	form : FormGroup<ControlsOf<PanelConfig>> = this.createForm();
+	form : FormGroup<PanelConfigAsControl> = this.createForm();
 
 	constructor(protected panelStore : PanelStore, protected consoleStore : ConsoleStore)
 	{
@@ -32,35 +32,35 @@ export class PanelComponent
 		return (this.form.get(path) as AbstractControl).value;
 	}
 
-	protected createForm() : FormGroup<ControlsOf<PanelConfig>>
+	protected createForm() : FormGroup<PanelConfigAsControl>
 	{
-		return new FormGroup<ControlsOf<PanelConfig>>(
+		return new FormGroup<PanelConfigAsControl>(
 		{
-			request : new FormGroup(
+			request: new FormGroup(
 			{
-				amount : new FormControl(20, [ Validators.min(1), Validators.max(100) ]),
-				delay : new FormControl(200, [ Validators.max(10000) ])
+				amount: new FormControl(20, [ Validators.min(1), Validators.max(100) ]),
+				delay: new FormControl(200, [ Validators.max(10000) ])
 			}),
-			abort : new FormGroup(
+			abort: new FormGroup(
 			{
-				lifetime : new FormControl(2000, [ Validators.max(10000) ]),
-				method: new FormControl('ANY')
+				lifetime: new FormControl(2000, [ Validators.max(10000) ]),
+				method: new FormControl<UniversalMethod>('ANY')
 			}),
-			cache : new FormGroup(
+			cache: new FormGroup(
 			{
-				lifetime : new FormControl(2000, [ Validators.max(10000) ]),
-				method: new FormControl('ANY')
+				lifetime: new FormControl(2000, [ Validators.max(10000) ]),
+				method: new FormControl<UniversalMethod>('ANY')
 			}),
-			observe : new FormGroup(
+			observe: new FormGroup(
 			{
-				lifetime : new FormControl(2000, [ Validators.max(10000) ]),
-				method: new FormControl('ANY')
+				lifetime: new FormControl(2000, [ Validators.max(10000) ]),
+				method: new FormControl<UniversalMethod>('ANY')
 			}),
-			environment : new FormGroup(
+			environment: new FormGroup(
 			{
 				apiUrl: new FormControl('https://api.chucknorris.io', [ Validators.required ]),
-				apiRoute : new FormControl('/jokes/random', [ Validators.required ]),
-				method : new FormControl('GET')
+				apiRoute: new FormControl('/jokes/random', [ Validators.required ]),
+				method: new FormControl<Method>('GET')
 			})
 		});
 	}
@@ -72,7 +72,7 @@ export class PanelComponent
 				debounceTime(1000),
 				distinctUntilChanged()
 			)
-			.subscribe(panelConfig =>
+			.subscribe((panelConfig : PanelConfig) =>
 			{
 				if (this.form.valid)
 				{
