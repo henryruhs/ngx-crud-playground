@@ -39,7 +39,7 @@ jobs:
     uses: actions/setup-node@v1
     with:
      node-version: 14
-  - run: npm install --force && cat package-lock.json
+  - run: npm install --force
   - run: npm run test
  test-acceptance:
   runs-on: ubuntu-latest
