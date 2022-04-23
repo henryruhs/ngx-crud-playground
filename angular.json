@@ -100,14 +100,18 @@
 				},
 				"lint":
 				{
-					"builder": "@angular-eslint/builder:lint",
+					"builder": "@krema/angular-eslint-stylelint-builder:lint",
 					"options":
 					{
-						"lintFilePatterns":
+						"eslintFilePatterns":
 						[
 							"**/**/*.json",
 							"src/**/**/*.ts",
 							"src/**/**/*.html"
+						],
+						"stylelintFilePatterns":
+						[
+							"src/**/**/*.scss"
 						]
 					}
 				},
