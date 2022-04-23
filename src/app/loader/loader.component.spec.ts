@@ -27,8 +27,7 @@ describe('LoaderComponent', () =>
 	it('Should create the component', () =>
 	{
 		const fixture : ComponentFixture<LoaderComponent> = TestBed.createComponent(LoaderComponent);
-		const component : any = fixture.debugElement.componentInstance;
 
-		expect(component).toBeTruthy();
+		expect(fixture.debugElement.componentInstance).toBeTruthy();
 	});
 });

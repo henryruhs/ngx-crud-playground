@@ -27,8 +27,7 @@ describe('CardComponent', () =>
 	it('Should create the component', () =>
 	{
 		const fixture : ComponentFixture<CardComponent> = TestBed.createComponent(CardComponent);
-		const component : any = fixture.debugElement.componentInstance;
 
-		expect(component).toBeTruthy();
+		expect(fixture.debugElement.componentInstance).toBeTruthy();
 	});
 });

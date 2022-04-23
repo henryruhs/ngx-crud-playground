@@ -28,8 +28,7 @@ describe('ConsoleComponent', () =>
 	it('Should create the component', () =>
 	{
 		const fixture : ComponentFixture<ConsoleComponent> = TestBed.createComponent(ConsoleComponent);
-		const appComponent : any = fixture.debugElement.componentInstance;
 
-		expect(appComponent).toBeTruthy();
+		expect(fixture.debugElement.componentInstance).toBeTruthy();
 	});
 });

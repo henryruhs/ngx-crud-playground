@@ -37,8 +37,7 @@ describe('PanelComponent', () =>
 	it('Should create the component', () =>
 	{
 		const fixture : ComponentFixture<PanelComponent> = TestBed.createComponent(PanelComponent);
-		const component : any = fixture.debugElement.componentInstance;
 
-		expect(component).toBeTruthy();
+		expect(fixture.debugElement.componentInstance).toBeTruthy();
 	});
 });
