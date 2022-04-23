@@ -106,13 +106,17 @@
 						"eslintFilePatterns":
 						[
 							"**/**/*.json",
-							"src/**/**/*.ts",
+							"{cypress,src}/**/**/*.ts",
 							"src/**/**/*.html"
 						],
 						"stylelintFilePatterns":
 						[
 							"src/**/**/*.scss"
-						]
+						],
+						"eslintCache": true,
+						"stylelintCache": true,
+						"eslintCacheLocation": "./.angular/cache/.eslintcache",
+						"stylelintCacheLocation": "./.angular/cache/.stylelintcache"
 					}
 				},
 				"test":
