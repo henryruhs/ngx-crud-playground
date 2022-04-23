@@ -2,7 +2,7 @@ module.exports =
 {
 	setupFilesAfterEnv:
 	[
-		'<rootDir>/setup-jest.ts'
+		'<rootDir>/jest.setup.ts'
 	],
 	testPathIgnorePatterns:
 	[
