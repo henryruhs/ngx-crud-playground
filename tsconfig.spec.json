@@ -7,7 +7,6 @@
 		[
 			"jest"
 		],
-		"module": "CommonJS",
 		"esModuleInterop": true
 	},
 	"files":
