@@ -3,16 +3,15 @@
 	"compilerOptions":
 	{
 		"outDir": "./out-tsc/spec",
-		"target": "es5",
 		"types":
 		[
-			"jasmine",
-			"node"
-		]
+			"jest"
+		],
+		"module": "CommonJS",
+		"esModuleInterop": true
 	},
 	"files":
 	[
-		"src/test.ts",
 		"src/polyfills.ts"
 	],
 	"include":

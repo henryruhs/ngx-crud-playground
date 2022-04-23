@@ -12,7 +12,7 @@ jobs:
     uses: actions/setup-node@v1
     with:
      node-version: 14
-  - run: npm install
+  - run: npm install --force
   - run: npm run lint
  build:
   runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
     uses: actions/setup-node@v1
     with:
      node-version: 14
-  - run: npm install
+  - run: npm install --force
   - run: npm run build:prod
   - name: Upload artifact
     uses: actions/upload-artifact@v2
@@ -39,7 +39,7 @@ jobs:
     uses: actions/setup-node@v1
     with:
      node-version: 14
-  - run: npm install
+  - run: npm install --force
   - run: npm run test
  test-acceptance:
   runs-on: ubuntu-latest
@@ -50,7 +50,7 @@ jobs:
     uses: actions/setup-node@v1
     with:
      node-version: 14
-  - run: npm install
+  - run: npm install --force
   - run: npm run start:local &
   - run: npm run wait-for-serve && npm run e2e:local
  deploy:
@@ -84,5 +84,5 @@ jobs:
     uses: actions/setup-node@v1
     with:
      node-version: 14
-  - run: npm install
+  - run: npm install --force
   - run: npm run e2e:prod

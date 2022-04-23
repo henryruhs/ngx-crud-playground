@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './content/card/card.component';
 import { PanelComponent } from './panel/panel.component';
+import { ConsoleComponent } from './panel/console/console.component';
 import { LoaderComponent } from './loader/loader.component';
 
 describe('AppComponent', () =>
@@ -25,6 +26,7 @@ describe('AppComponent', () =>
 					ContentComponent,
 					CardComponent,
 					PanelComponent,
+					ConsoleComponent,
 					LoaderComponent
 				],
 				imports:

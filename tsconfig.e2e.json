@@ -8,9 +8,5 @@
 			"cypress",
 			"node"
 		]
-	},
-	"include":
-	[
-		"e2e/**/*.ts"
-	]
+	}
 }
