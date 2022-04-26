@@ -6,6 +6,7 @@
 
 .wrapper-content
 {
+	scroll-behavior: smooth;
 	scrollbar-color: var(--color-primary) #121212;
 
 	&::-webkit-scrollbar
