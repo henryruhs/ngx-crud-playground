@@ -3,6 +3,13 @@
 	[
 		"@isnotdefined/eslint-config"
 	],
+	"parserOptions":
+	{
+		"project":
+		[
+			"./tsconfig.lint.json"
+		]
+	},
 	"overrides":
 	[
 		{
