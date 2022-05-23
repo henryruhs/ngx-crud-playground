@@ -55,7 +55,7 @@
 		"@angular/compiler-cli": "14.0.0-next.14",
 		"@angular/language-service": "14.0.0-next.14",
 		"@cypress/schematic": "1.6.0",
-		"@krema/angular-eslint-stylelint-builder": "1.2.0",
+		"@krema/angular-eslint-stylelint-builder": "1.2.2",
 		"@isnotdefined/eslint-config": "5.0.0",
 		"@isnotdefined/stylelint-config": "3.3.1",
 		"@types/jest": "27.5.0",
