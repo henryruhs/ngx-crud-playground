@@ -4,8 +4,10 @@ export default defineConfig(
 {
 	e2e:
 	{
-		specPattern: 'cypress/**/**.spec.ts',
-		supportFile: false
+		setupNodeEvents(on : Cypress.PluginEvents)
+		{
+			require('cypress-terminal-report/src/installLogsPrinter')(on);
+		}
 	},
 	video: false
 });
