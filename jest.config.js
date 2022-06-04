@@ -5,8 +5,5 @@ module.exports =
 	[
 		'<rootDir>/jest.setup.ts'
 	],
-	testPathIgnorePatterns:
-	[
-		'<rootDir>/cypress'
-	]
+	globalSetup: 'jest-preset-angular/global-setup'
 };
