@@ -65,6 +65,7 @@
 		"cross-env": "7.0.3",
 		"eslint": "8.17.0",
 		"jest": "28.1.0",
+		"jest-environment-jsdom": "28.1.0",
 		"jest-preset-angular": "12.1.0",
 		"ncss-linter": "6.2.0",
 		"postcss-scss": "4.0.4",
