@@ -1,4 +1,5 @@
 import { defineConfig } from 'cypress';
+import installLogsPrinter from 'cypress-terminal-report/src/installLogsPrinter';
 
 export default defineConfig(
 {
@@ -6,8 +7,12 @@ export default defineConfig(
 	{
 		setupNodeEvents(on : Cypress.PluginEvents)
 		{
-			require('cypress-terminal-report/src/installLogsPrinter')(on);
+			installLogsPrinter(on);
 		}
+	},
+	env:
+	{
+		tsConfig: './tsconfig.e2e.json'
 	},
 	video: false
 });

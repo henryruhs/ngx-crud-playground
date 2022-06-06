@@ -4,18 +4,18 @@
 	[
 		{
 			"use": "@vercel/static",
-			"src": "dist/ngx-crud-playground/**"
+			"src": "build/ngx-crud-playground/**"
 		}
 	],
 	"routes":
 	[
 		{
 			"src": "/",
-			"dest": "dist/ngx-crud-playground/index.html"
+			"dest": "build/ngx-crud-playground/index.html"
 		},
 		{
 			"src": "/(.+)",
-			"dest": "dist/ngx-crud-playground/$1"
+			"dest": "build/ngx-crud-playground/$1"
 		}
 	]
 }

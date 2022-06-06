@@ -28,7 +28,7 @@
 					"builder": "@angular-devkit/build-angular:browser",
 					"options":
 					{
-						"outputPath": "dist/ngx-crud-playground",
+						"outputPath": "build/ngx-crud-playground",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
@@ -141,8 +141,8 @@
 					"builder": "@cypress/schematic:cypress",
 					"options":
 					{
-						"watch": false,
-						"headless": true
+						"headless": true,
+						"watch": false
 					}
 				}
 			}
