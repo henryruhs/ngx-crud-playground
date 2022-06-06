@@ -147,11 +147,5 @@
 				}
 			}
 		}
-	},
-	"defaultProject": "ngx-crud-playground",
-	"cli":
-	{
-		"defaultCollection": "@angular-eslint/schematics",
-		"analytics": false
 	}
 }

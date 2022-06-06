@@ -3,22 +3,24 @@
 	"compilerOptions":
 	{
 		"baseUrl": "./",
+		"target": "es2020",
 		"module": "es2020",
 		"moduleResolution": "node",
-		"target": "es2018",
-		"sourceMap": false,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"sourceMap": true,
 		"declaration": false,
 		"downlevelIteration": true,
 		"experimentalDecorators": true,
 		"importHelpers": true,
 		"esModuleInterop": true,
-		"typeRoots":
-		[
-			"node_modules/@types"
-		],
 		"lib":
 		[
-			"es2018",
+			"es2020",
 			"dom"
 		]
 	},
