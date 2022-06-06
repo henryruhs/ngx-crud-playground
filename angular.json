@@ -124,16 +124,7 @@
 					"builder": "@angular-builders/jest:run",
 					"options":
 					{
-						"tsConfig": "tsconfig.spec.json",
-						"assets":
-						[
-							"src/assets"
-						],
-						"styles":
-						[
-							"src/styles.scss"
-						],
-						"scripts": []
+						"tsConfig": "tsconfig.spec.json"
 					}
 				},
 				"e2e":
