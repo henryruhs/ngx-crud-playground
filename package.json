@@ -81,7 +81,7 @@
 		"lint": "ng lint && ncss-linter",
 		"fix": "ng lint --fix",
 		"test": "ng test",
-		"e2e": "ng cypress",
+		"e2e": "ng e2e",
 		"e2e:local": "cross-env-shell CYPRESS_APP_ENV=local npm run e2e",
 		"e2e:prod": "cross-env-shell CYPRESS_APP_ENV=prod npm run e2e",
 		"wait-for-serve": "wait-on tcp:4200 && sleep 30"
