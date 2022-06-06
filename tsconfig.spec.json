@@ -6,5 +6,9 @@
 		[
 			"jest"
 		]
-	}
+	},
+	"include":
+	[
+		"src/**/**/*.spec.ts"
+	]
 }
