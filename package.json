@@ -47,13 +47,10 @@
 	{
 		"@angular-builders/jest": "13.0.4",
 		"@angular-devkit/build-angular": "14.0.0",
-		"@angular-eslint/builder": "13.2.1",
-		"@angular-eslint/eslint-plugin": "13.2.1",
 		"@angular-eslint/eslint-plugin-template": "13.2.1",
 		"@angular-eslint/template-parser": "13.2.1",
 		"@angular/cli": "14.0.0",
 		"@angular/compiler-cli": "14.0.0",
-		"@angular/language-service": "14.0.0",
 		"@cypress/schematic": "2.0.0",
 		"@krema/angular-eslint-stylelint-builder": "1.2.2",
 		"@isnotdefined/eslint-config": "5.1.0",
@@ -70,8 +67,6 @@
 		"ncss-linter": "6.2.0",
 		"postcss-scss": "4.0.4",
 		"stylelint": "14.8.5",
-		"ts-loader": "9.3.0",
-		"ts-node": "10.8.1",
 		"typescript": "4.7.3",
 		"wait-on": "6.0.1"
 	},
@@ -86,7 +81,7 @@
 		"lint": "ng lint && ncss-linter",
 		"fix": "ng lint --fix",
 		"test": "ng test",
-		"e2e": "ng e2e",
+		"e2e": "ng cypress",
 		"e2e:local": "cross-env-shell CYPRESS_APP_ENV=local npm run e2e",
 		"e2e:prod": "cross-env-shell CYPRESS_APP_ENV=prod npm run e2e",
 		"wait-for-serve": "wait-on tcp:4200 && sleep 30"

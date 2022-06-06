@@ -4,12 +4,9 @@ import { Environment } from './environment.interface';
 
 export const environmentHelper : Function = (environment : string) : Environment =>
 {
-	if (environment === 'local')
-	{
-		return environmentLocal;
-	}
 	if (environment === 'prod')
 	{
 		return environmentProd;
 	}
+	return environmentLocal;
 };
