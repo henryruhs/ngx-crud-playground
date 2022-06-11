@@ -5,6 +5,7 @@ export default defineConfig(
 {
 	e2e:
 	{
+		specPattern: 'src/**/**/*.e2e.ts',
 		setupNodeEvents(on : Cypress.PluginEvents)
 		{
 			installLogsPrinter(on);
@@ -12,7 +13,7 @@ export default defineConfig(
 	},
 	env:
 	{
-		tsConfig: './tsconfig.e2e.json'
+		tsConfig: 'tsconfig.e2e.json'
 	},
 	video: false
 });

@@ -8,10 +8,10 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v3
-  - name: Set up Node 14
+  - name: Set up Node 16
     uses: actions/setup-node@v3
     with:
-     node-version: 14
+     node-version: 16
   - run: npm install
   - run: npm run lint
  build:
@@ -19,10 +19,10 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v3
-  - name: Set up Node 14
+  - name: Set up Node 16
     uses: actions/setup-node@v3
     with:
-     node-version: 14
+     node-version: 16
   - run: npm install
   - run: npm run build:prod
   - name: Upload artifact
@@ -35,10 +35,10 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v3
-  - name: Set up Node 14
+  - name: Set up Node 16
     uses: actions/setup-node@v3
     with:
-     node-version: 14
+     node-version: 16
   - run: npm install
   - run: npm run test
  test-acceptance:
@@ -46,10 +46,10 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v3
-  - name: Set up Node 14
+  - name: Set up Node 16
     uses: actions/setup-node@v3
     with:
-     node-version: 14
+     node-version: 16
   - run: npm install
   - run: npm run start:local &
   - run: npm run wait-for-serve && npm run e2e:local
@@ -80,9 +80,9 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v3
-  - name: Set up Node 14
+  - name: Set up Node 16
     uses: actions/setup-node@v3
     with:
-     node-version: 14
+     node-version: 16
   - run: npm install
   - run: npm run e2e:prod

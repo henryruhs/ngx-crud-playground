@@ -1,5 +1,5 @@
-import { environmentHelper } from '../../src/environments/environment.helper';
-import { Environment } from '../../src/environments/environment.interface';
+import { environmentHelper } from '../environments/environment.helper';
+import { Environment } from '../environments/environment.interface';
 
 const environment : Environment = environmentHelper(Cypress.env('APP_ENV'));
 

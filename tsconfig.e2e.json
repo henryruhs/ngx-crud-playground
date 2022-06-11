@@ -10,6 +10,6 @@
 	},
 	"include":
 	[
-		"cypress/**/**/*.cy.ts"
+		"src/**/**/*.e2e.ts"
 	]
 }

@@ -114,8 +114,8 @@
 						],
 						"eslintCache": true,
 						"stylelintCache": true,
-						"eslintCacheLocation": "./.angular/cache/.eslintcache",
-						"stylelintCacheLocation": "./.angular/cache/.stylelintcache"
+						"eslintCacheLocation": ".angular/cache/.eslintcache",
+						"stylelintCacheLocation": ".angular/cache/.stylelintcache"
 					}
 				},
 				"test":

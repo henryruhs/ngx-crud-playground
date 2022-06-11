@@ -2,10 +2,14 @@
 	"compileOnSave": false,
 	"compilerOptions":
 	{
-		"baseUrl": "./",
 		"target": "es2020",
 		"module": "es2020",
 		"moduleResolution": "node",
+		"lib":
+		[
+			"es2020",
+			"dom"
+		],
 		"forceConsistentCasingInFileNames": true,
 		"strict": false,
 		"noImplicitOverride": true,
@@ -17,12 +21,7 @@
 		"downlevelIteration": true,
 		"experimentalDecorators": true,
 		"importHelpers": true,
-		"esModuleInterop": true,
-		"lib":
-		[
-			"es2020",
-			"dom"
-		]
+		"esModuleInterop": true
 	},
 	"angularCompilerOptions":
 	{

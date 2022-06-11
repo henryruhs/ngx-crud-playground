@@ -1,5 +1,5 @@
 {
-	"path": "src/**/*.html",
+	"path": "src/**/**/*.html",
 	"logLevel": "info",
 	"haltOnError": true,
     "haltOnWarn": true
