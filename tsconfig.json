@@ -2,6 +2,7 @@
 	"compileOnSave": false,
 	"compilerOptions":
 	{
+		"baseUrl": ".",
 		"target": "es2020",
 		"module": "es2020",
 		"moduleResolution": "node",
@@ -10,6 +11,13 @@
 			"es2020",
 			"dom"
 		],
+		"paths":
+		{
+			"@environments":
+			[
+				"src/environments"
+			]
+		},
 		"forceConsistentCasingInFileNames": true,
 		"strict": false,
 		"noImplicitOverride": true,
