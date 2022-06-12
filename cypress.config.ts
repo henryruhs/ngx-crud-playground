@@ -5,6 +5,11 @@ export default defineConfig(
 {
 	e2e:
 	{
+		downloadsFolder: '.cypress/downloads',
+		fixturesFolder: '.cypress/fixtures',
+		screenshotsFolder: '.cypress/screenshots',
+		videosFolder: '.cypress/videos',
+		supportFile: '.cypress/support/e2e.ts',
 		specPattern: 'src/**/**/*.e2e.ts',
 		setupNodeEvents(on : Cypress.PluginEvents)
 		{
