@@ -12,10 +12,6 @@
 		{
 			"src": "/",
 			"dest": "build/ngx-crud-playground/index.html"
-		},
-		{
-			"src": "/(.+)",
-			"dest": "build/ngx-crud-playground/$1"
 		}
 	]
 }
