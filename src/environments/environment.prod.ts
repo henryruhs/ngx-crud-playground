@@ -7,5 +7,5 @@ export const environment : Environment =
 		branch: 'master',
 		environment: 'prod'
 	},
-	baseUrl: 'https://ngx-crud-playground.vercel.app'
+	baseUrl: 'https://playground.ngx-crud.com'
 };
