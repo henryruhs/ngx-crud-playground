@@ -3,7 +3,10 @@ import { HttpContextToken, HttpErrorResponse, HttpRequest, HttpResponse } from '
 import { ObserveAfterEffect, ObserveBeforeEffect } from 'ngx-crud';
 import { ConsoleStore } from './console.store';
 
-@Injectable()
+@Injectable(
+{
+	providedIn: 'root'
+})
 export class ConsoleEffect implements ObserveBeforeEffect, ObserveAfterEffect
 {
 	protected defaultContext : number = 0;

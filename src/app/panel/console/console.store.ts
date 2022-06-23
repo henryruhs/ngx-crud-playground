@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { ConsoleEntry } from './console.interface';
 
-@Injectable()
+@Injectable(
+{
+	providedIn: 'root'
+})
 export class ConsoleStore
 {
 	protected store : BehaviorSubject<ConsoleEntry[]> = new BehaviorSubject<ConsoleEntry[]>([]);

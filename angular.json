@@ -137,5 +137,9 @@
 				}
 			}
 		}
+	},
+	"cli":
+	{
+		"analytics": false
 	}
 }
