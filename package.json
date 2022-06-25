@@ -76,7 +76,7 @@
 		"build:local": "npm run build -- --configuration=local",
 		"build:prod": "npm run build -- --configuration=prod",
 		"lint": "ng lint",
-		"fix": "ng lint --fix",
+		"fix": "npm run lint -- --fix",
 		"test": "ng test",
 		"e2e": "ng e2e",
 		"e2e:local": "cross-env-shell CYPRESS_APP_ENV=local npm run e2e",
