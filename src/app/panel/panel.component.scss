@@ -1,9 +1,10 @@
+@import '../../styles/utilities';
 @import '../../styles/variables';
 
 :host
  {
-	background: #222;
-	color: #aaa;
+	background: gray(13);
+	color: gray(80);
 	padding: 1em 2em 2em;
 	position: relative;
 }
@@ -19,9 +20,9 @@ label
 
 input[type=text]
 {
-	background: linear-gradient(#121212, #181818);
+	background: linear-gradient(gray(7), gray(9));
 	border-radius: 0.25em;
-	color: #ccc;
+	color: gray(70);
 	padding: 0.5em;
 	transition: background 0.6s;
 	width: 100%;
@@ -29,13 +30,13 @@ input[type=text]
 	&.ng-invalid
 	{
 		background: var(--color-error);
-		color: #111;
+		color: gray(0, 80);
 	}
 
 	&:not(.ng-invalid):focus
 	{
 		background: var(--color-primary);
-		color: #111;
+		color: gray(0, 80);
 	}
 }
 
@@ -47,7 +48,7 @@ input[type=range]
 
 	&::-webkit-slider-runnable-track
 	{
-		background: linear-gradient(#121212, #181818);
+		background: linear-gradient(gray(7), gray(9));
 		border-radius: 0.25em;
 		height: 0.75em;
 		transition: background 0.6s;
@@ -62,7 +63,7 @@ input[type=range]
 	&::-webkit-slider-thumb
 	{
 		appearance: none;
-		background: radial-gradient(#ccc, #eee);
+		background: radial-gradient(gray(80), gray(100));
 		border: 0;
 		border-radius: 50%;
 		cursor: move;
@@ -73,7 +74,7 @@ input[type=range]
 
 	&::-moz-range-track
 	{
-		background: linear-gradient(#121212, #181818);
+		background: linear-gradient(gray(7), gray(9));
 		border-radius: 0.25em;
 		height: 0.75em;
 		transition: background 0.6s;
@@ -87,7 +88,7 @@ input[type=range]
 
 	&::-moz-range-thumb
 	{
-		background: radial-gradient(#ccc, #eee);
+		background: radial-gradient(gray(80), gray(100));
 		border: 0;
 		border-radius: 50%;
 		cursor: move;

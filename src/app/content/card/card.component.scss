@@ -1,7 +1,10 @@
+@import '../../../styles/utilities';
+@import '../../../styles/variables';
+
 .component-card
 {
 	align-items: center;
-	color: #282828;
+	color: gray(20);
 	counter-increment: card;
 	cursor: pointer;
 	display: flex;
@@ -17,7 +20,7 @@
 
 	&.is-completed
 	{
-		color: #ccc;
+		color: gray(70);
 	}
 
 	&.is-errored

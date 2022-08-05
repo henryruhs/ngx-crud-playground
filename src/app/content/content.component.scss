@@ -1,17 +1,19 @@
+@import '../../styles/utilities';
+
 :host
 {
-	background: #181818;
+	background: gray(10);
 	counter-reset: card;
 }
 
 .wrapper-content
 {
 	scroll-behavior: smooth;
-	scrollbar-color: var(--color-primary) #121212;
+	scrollbar-color: var(--color-primary) gray(7);
 
 	&::-webkit-scrollbar
 	{
-		background: #121212;
+		background: gray(7);
 		height: 0.375em;
 	}
 

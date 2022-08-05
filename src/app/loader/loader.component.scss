@@ -1,3 +1,5 @@
+@import '../../styles/utilities';
+
 .component-loader,
 .component-loader:before
 {
@@ -10,7 +12,7 @@
 
 .component-loader
 {
-	background: #121212;
+	background: gray(7);
 	display: flex;
 	opacity: 0;
 	transition: opacity 0.4s 0.4s;

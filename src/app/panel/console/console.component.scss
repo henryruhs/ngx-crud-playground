@@ -1,16 +1,18 @@
+@import '../../../styles/utilities';
+
 .list-console
 {
-	background: linear-gradient(#121212, #181818);
+	background: linear-gradient(gray(7), gray(9));
 	border-radius: 0.25em;
-	color: #ccc;
+	color: gray(70);
 	height: 15.25em;
 	overflow-y: scroll;
 	padding: 0.5em;
-	scrollbar-color: var(--color-primary) #121212;
+	scrollbar-color: var(--color-primary) gray(7);
 
 	&::-webkit-scrollbar
 	{
-		background: #121212;
+		background: gray(7);
 		width: 0.375em;
 	}
 
