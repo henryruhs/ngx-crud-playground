@@ -1,4 +1,6 @@
+@use 'sass:math';
+
 @function gray($level : 0, $alpha : 100)
 {
-	@return rgba(lighten(#000, $level), $alpha / 100);
+	@return rgba(lighten(#000, $level), math.div($alpha, 100));
 }
