@@ -1,4 +1,4 @@
-@function gray($amount : 50, $alpha : 100)
+@function gray($level : 0, $alpha : 100)
 {
-	@return rgba(lighten(#000, $amount), $alpha / 100);
+	@return rgba(lighten(#000, $level), $alpha / 100);
 }
