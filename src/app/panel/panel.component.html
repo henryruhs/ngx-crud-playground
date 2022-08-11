@@ -4,13 +4,13 @@
 			<span>request.amount</span>
 			<span>{{ getValue('request.amount') }}</span>
 		</label>
-		<input type="range" formControlName="amount" min="1" max="100" />
+		<input type="range" formControlName="amount" min="1" max="50" />
 
 		<label>
 			<span>request.delay</span>
 			<span [ngTemplateOutlet]="time" [ngTemplateOutletContext]="{ value : getValue('request.delay') }"></span>
 		</label>
-		<input type="range" formControlName="delay" max="10000" step="100" />
+		<input type="range" formControlName="delay" max="10000" step="50" />
 	</fieldset>
 
 	<fieldset formGroupName="abort">
@@ -18,7 +18,7 @@
 			<span>abort.lifetime</span>
 			<span [ngTemplateOutlet]="time" [ngTemplateOutletContext]="{ value : getValue('abort.lifetime') }"></span>
 		</label>
-		<input type="range" formControlName="lifetime" max="10000" step="100" />
+		<input type="range" formControlName="lifetime" max="10000" step="50" />
 	</fieldset>
 
 	<fieldset formGroupName="cache">
@@ -26,7 +26,7 @@
 			<span>cache.lifetime</span>
 			<span [ngTemplateOutlet]="time" [ngTemplateOutletContext]="{ value : getValue('cache.lifetime') }"></span>
 		</label>
-		<input type="range" formControlName="lifetime" max="10000" step="100" />
+		<input type="range" formControlName="lifetime" max="10000" step="50" />
 	</fieldset>
 
 	<fieldset formGroupName="observe">
@@ -34,7 +34,7 @@
 			<span>observe.lifetime</span>
 			<span [ngTemplateOutlet]="time" [ngTemplateOutletContext]="{ value : getValue('observe.lifetime') }"></span>
 		</label>
-		<input type="range" formControlName="lifetime" max="10000" step="100" />
+		<input type="range" formControlName="lifetime" max="10000" step="50" />
 	</fieldset>
 
 	<fieldset formGroupName="environment">
