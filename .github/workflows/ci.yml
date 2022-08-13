@@ -85,4 +85,4 @@ jobs:
     with:
      node-version: 16
   - run: npm install
-  - run: npm run e2e:prod
+  - run: xvfb-run --auto-servernum npm run e2e:prod
