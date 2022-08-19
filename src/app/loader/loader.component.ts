@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { mergeMap } from 'rxjs';
 import { ObserveService, ObserveStatus } from 'ngx-crud';
 
 @Component(
@@ -20,6 +21,6 @@ export class LoaderComponent implements OnInit
 
 	ngOnInit() : void
 	{
-		this.observeService.observeAll().subscribe(observeStatus => this.observeStatus = observeStatus);
+		this.observeService.observeAll().pipe(mergeMap(value => value[1].status)).subscribe(observeStatus => this.observeStatus = observeStatus);
 	}
 }
