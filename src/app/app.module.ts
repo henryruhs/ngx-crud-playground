@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './content/card/card.component';
 import { PanelComponent } from './panel/panel.component';
