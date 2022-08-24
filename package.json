@@ -53,7 +53,7 @@
 		"@cypress/schematic": "2.0.0",
 		"@krema/angular-eslint-stylelint-builder": "1.2.3",
 		"@isnotdefined/eslint-config": "6.1.2",
-		"@isnotdefined/stylelint-config": "3.5.0",
+		"@isnotdefined/stylelint-config": "4.0.0",
 		"@types/jest": "28.1.6",
 		"@types/node": "18.6.4",
 		"cypress": "10.4.0",
