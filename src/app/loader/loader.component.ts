@@ -24,7 +24,7 @@ export class LoaderComponent implements OnInit
 		this.observeService.observeAll()
 			.pipe(
 				mergeMap(value => value[1].status),
-				debounce(value =>timer(value === 'COMPLETED' ? 2000 : 0))
+				debounce(value => timer(value === 'COMPLETED' ? 2000 : 0))
 			)
 			.subscribe(observeStatus => this.observeStatus = observeStatus);
 	}
