@@ -15,7 +15,6 @@
 	background: gray(7);
 	display: flex;
 	opacity: 0;
-	transition: opacity 0.4s 0.4s;
 
 	&.is-started
 	{
@@ -23,7 +22,7 @@
 
 		&:before
 		{
-			animation: loader 1.4s infinite;
+			animation: loader 1.4s linear infinite;
 			background: var(--color-primary);
 			content: '';
 		}
@@ -40,7 +39,7 @@
 
 	50%
 	{
-		margin-left: 25%;
+		margin-left: 50%;
 		margin-right: 0;
 	}
 
