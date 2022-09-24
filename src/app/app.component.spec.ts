@@ -13,7 +13,7 @@ import { PanelComponent } from './panel/panel.component';
 import { ConsoleComponent } from './panel/console/console.component';
 import { LoaderComponent } from './loader/loader.component';
 
-describe('AppComponent', () =>
+describe(AppComponent.name, () =>
 {
 	beforeEach(waitForAsync(() =>
 	{

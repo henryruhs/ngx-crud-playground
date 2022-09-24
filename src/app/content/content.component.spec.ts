@@ -3,7 +3,7 @@ import { PanelStore } from '../panel/panel.store';
 
 import { ContentComponent } from './content.component';
 
-describe('ContentComponent', () =>
+describe(ContentComponent.name, () =>
 {
 	beforeEach(waitForAsync(() =>
 	{

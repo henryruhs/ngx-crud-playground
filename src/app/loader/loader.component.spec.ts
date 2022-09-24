@@ -4,7 +4,7 @@ import { CrudModule } from 'ngx-crud';
 
 import { LoaderComponent } from './loader.component';
 
-describe('LoaderComponent', () =>
+describe(LoaderComponent.name, () =>
 {
 	beforeEach(waitForAsync(() =>
 	{

@@ -8,7 +8,7 @@ import { ConsoleStore } from './console/console.store';
 import { PanelComponent } from './panel.component';
 import { ConsoleComponent } from './console/console.component';
 
-describe('PanelComponent', () =>
+describe(PanelComponent.name, () =>
 {
 	beforeEach(waitForAsync(() =>
 	{
