@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { mergeMap, debounce, timer } from 'rxjs';
+import { debounce, timer, mergeMap } from 'rxjs';
+import { Store } from 'ngx-crud/observe/observe.interface';
 import { ObserveService, ObserveStatus } from 'ngx-crud';
 
 @Component(
@@ -23,8 +24,8 @@ export class LoaderComponent implements OnInit
 	{
 		this.observeService.observeAll()
 			.pipe(
-				mergeMap(value => value[1].status),
-				debounce(value => timer(value === 'COMPLETED' ? 2000 : 0))
+				mergeMap(value => (value.at(1) as Store).status),
+				debounce(observeStatus => timer(observeStatus === 'COMPLETED' ? 2000 : 0))
 			)
 			.subscribe(observeStatus => this.observeStatus = observeStatus);
 	}
