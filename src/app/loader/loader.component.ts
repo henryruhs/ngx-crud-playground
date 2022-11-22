@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { debounce, timer, mergeMap } from 'rxjs';
-import { Store } from 'ngx-crud/observe/observe.interface';
+import { Component } from '@angular/core';
+import { Observable, debounce, timer, mergeMap } from 'rxjs';
 import { ObserveService, ObserveStatus } from 'ngx-crud';
+import { Store } from 'ngx-crud/observe/observe.interface';
 
 @Component(
 {
@@ -12,21 +12,21 @@ import { ObserveService, ObserveStatus } from 'ngx-crud';
 	],
 	templateUrl: './loader.component.html'
 })
-export class LoaderComponent implements OnInit
+export class LoaderComponent
 {
-	observeStatus : ObserveStatus;
+	observeStatus$ : Observable<ObserveStatus> = this.getObserveStatus();
 
 	constructor(protected observeService : ObserveService)
 	{
 	}
 
-	ngOnInit() : void
+	protected getObserveStatus() : Observable<ObserveStatus>
 	{
-		this.observeService.observeAll()
+		return this.observeService
+			.observeAll()
 			.pipe(
 				mergeMap(value => (value.at(1) as Store).status),
 				debounce(observeStatus => timer(observeStatus === 'COMPLETED' ? 2000 : 0))
-			)
-			.subscribe(observeStatus => this.observeStatus = observeStatus);
+			);
 	}
 }

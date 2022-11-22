@@ -1,4 +1,4 @@
-<div
+<div *ngIf="observeStatus$ | async as observeStatus"
 	[class.is-started]="observeStatus === 'STARTED'"
 	[class.is-completed]="observeStatus === 'COMPLETED'"
 	class="component-loader"></div>

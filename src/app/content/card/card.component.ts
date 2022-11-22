@@ -17,7 +17,7 @@ export class CardComponent implements OnChanges, OnDestroy
 {
 	@Input() index : number;
 	@Input() panelConfig : PanelConfig;
-	@ViewChild('card') cardElement : ElementRef;
+	@ViewChild('card') cardElement : ElementRef<HTMLElement>;
 
 	requestStatus : RequestStatus;
 	timer : Subscription = new Subscription();
@@ -39,10 +39,11 @@ export class CardComponent implements OnChanges, OnDestroy
 
 	load() : void
 	{
-		(this.cardElement.nativeElement as HTMLElement)
+		this.cardElement
+			.nativeElement
 			.parentElement
 			.parentElement
-			.scrollLeft = (this.cardElement.nativeElement as HTMLElement).offsetLeft;
+			.scrollLeft = this.cardElement.nativeElement.offsetLeft;
 		this.requestStatus = 'STARTED';
 		this.customService
 			.setApiUrl(this.panelConfig.environment.apiUrl)
