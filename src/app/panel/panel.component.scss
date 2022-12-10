@@ -29,13 +29,13 @@ input[type=text]
 
 	&.ng-invalid
 	{
-		background: var(--color-error);
+		background: $color-error;
 		color: gray(0, 80);
 	}
 
 	&:not(.ng-invalid):focus
 	{
-		background: var(--color-primary);
+		background: $color-primary;
 		color: gray(0, 80);
 	}
 }
@@ -57,7 +57,7 @@ input[type=range]
 
 	&:focus::-webkit-slider-runnable-track
 	{
-		background: var(--color-primary);
+		background: $color-primary;
 	}
 
 	&::-webkit-slider-thumb
@@ -83,7 +83,7 @@ input[type=range]
 
 	&:focus::-moz-range-track
 	{
-		background: var(--color-primary);
+		background: $color-primary;
 	}
 
 	&::-moz-range-thumb

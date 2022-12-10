@@ -15,7 +15,7 @@
 
 	&.is-started
 	{
-		color: var(--color-primary);
+		color: $color-primary;
 	}
 
 	&.is-completed
@@ -25,7 +25,7 @@
 
 	&.is-errored
 	{
-		color: var(--color-error);
+		color: $color-error;
 	}
 
 	&:after

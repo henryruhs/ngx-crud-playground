@@ -1,4 +1,5 @@
 @import '../../styles/utilities';
+@import '../../styles/variables';
 
 .component-loader,
 .component-loader:before
@@ -23,7 +24,7 @@
 		&:before
 		{
 			animation: loader 1.4s linear infinite;
-			background: var(--color-primary);
+			background: $color-primary;
 			content: '';
 		}
 	}
