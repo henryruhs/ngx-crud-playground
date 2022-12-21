@@ -9,12 +9,6 @@ NGX CRUD Playground
 Installation
 ------------
 
-Clone the repository:
-
-```
-git clone https://github.com/henryruhs/ngx-crud-playground.git
-```
-
 Install the dependencies:
 
 ```
