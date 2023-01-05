@@ -14,7 +14,7 @@ import { Store } from 'ngx-crud/observe/observe.interface';
 })
 export class LoaderComponent
 {
-	observeStatus$ : Observable<ObserveStatus> = this.getObserveStatus();
+	observeStatus : Observable<ObserveStatus> = this.getObserveStatus();
 
 	constructor(protected observeService : ObserveService)
 	{
