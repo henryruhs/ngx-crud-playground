@@ -22,7 +22,6 @@
 		"forceConsistentCasingInFileNames": true,
 		"strict": false,
 		"noImplicitOverride": true,
-		"noPropertyAccessFromIndexSignature": true,
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
 		"sourceMap": false,
