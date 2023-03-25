@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+
 import { PanelConfig } from './panel.interface';
 
 @Injectable(

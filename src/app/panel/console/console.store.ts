@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+
 import { ConsoleEntry } from './console.interface';
 
 @Injectable(
@@ -25,8 +26,7 @@ export class ConsoleStore
 		this.store.next(
 		[
 			...this.store.getValue(),
-			...
-			[
+			...[
 				entry
 			]
 		]);

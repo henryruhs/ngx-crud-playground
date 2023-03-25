@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { ConsoleStore } from './console.store';
 import { PanelStore } from '../panel.store';
-
-import { ConsoleEntry } from './console.interface';
 import { PanelConfig } from '../panel.interface';
+
+import { ConsoleStore } from './console.store';
+import { ConsoleEntry } from './console.interface';
 
 @Component(
 {

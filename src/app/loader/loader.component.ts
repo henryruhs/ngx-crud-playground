@@ -25,7 +25,7 @@ export class LoaderComponent
 		return this.observeService
 			.observeAll()
 			.pipe(
-				mergeMap(value => (value.at(1) as Store).status),
+				mergeMap(value => value.at(1) as Store.status),
 				debounce(observeStatus => timer(observeStatus === 'COMPLETED' ? 2000 : 0))
 			);
 	}

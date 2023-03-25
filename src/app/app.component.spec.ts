@@ -5,7 +5,6 @@ import { CrudModule } from 'ngx-crud';
 
 import { PanelStore } from './panel/panel.store';
 import { ConsoleStore } from './panel/console/console.store';
-
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { CardComponent } from './content/card/card.component';

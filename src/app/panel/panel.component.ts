@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Method, UniversalMethod } from 'ngx-crud';
 
 import { PanelStore } from './panel.store';
 import { ConsoleStore } from './console/console.store';
-
-import { Method, UniversalMethod } from 'ngx-crud';
 import { PanelConfig, PanelConfigAsControl } from './panel.interface';
 
 @Component(
@@ -29,7 +28,7 @@ export class PanelComponent
 
 	getValue(path : string) : number
 	{
-		return (this.form.get(path) as AbstractControl).value;
+		return this.form.get(path) as AbstractControl.value;
 	}
 
 	protected createForm() : FormGroup<PanelConfigAsControl>

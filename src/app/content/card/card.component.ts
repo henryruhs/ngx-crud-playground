@@ -1,7 +1,9 @@
 import { Component, ElementRef, Input, OnChanges, OnDestroy, ViewChild } from '@angular/core';
 import { timer, Subscription } from 'rxjs';
 import { CustomService } from 'ngx-crud';
+
 import { PanelConfig } from '../../panel/panel.interface';
+
 import { RequestStatus } from './card.type';
 
 @Component(
