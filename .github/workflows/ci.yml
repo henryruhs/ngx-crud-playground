@@ -54,7 +54,7 @@ jobs:
   - run: npm run start:local &
   - run: npm run wait-for-serve && npm run e2e:local
  deploy:
-  needs: [ build, test, e2e ]
+  needs: [ lint, build, test, e2e ]
   if: github.ref == 'refs/heads/master'
   runs-on: ubuntu-latest
   steps:
