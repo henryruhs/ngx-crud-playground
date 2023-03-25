@@ -4,9 +4,5 @@
 		"@isnotdefined/eslint-config/angular",
 		"@isnotdefined/eslint-config/common",
 		"@isnotdefined/eslint-config/jest"
-	],
-	"rules":
-	{
-		"no-return-assign": "warn"
-	}
+	]
 }

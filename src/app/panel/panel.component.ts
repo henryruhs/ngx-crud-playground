@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { debounceTime, distinctUntilChanged } from 'rxjs';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { debounceTime, distinctUntilChanged, Observable, tap } from 'rxjs';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Method, UniversalMethod } from 'ngx-crud';
 
 import { PanelStore } from './panel.store';
@@ -22,13 +22,13 @@ export class PanelComponent
 
 	constructor(protected panelStore : PanelStore, protected consoleStore : ConsoleStore)
 	{
-		this.bindForm();
-		this.triggerFormChanged();
+		this.listenOnFormChanges().subscribe();
+		this.triggerFormChange();
 	}
 
 	getValue(path : string) : number
 	{
-		return this.form.get(path) as AbstractControl.value;
+		return this.form.get(path).value;
 	}
 
 	protected createForm() : FormGroup<PanelConfigAsControl>
@@ -64,24 +64,24 @@ export class PanelComponent
 		});
 	}
 
-	protected bindForm() : void
+	protected listenOnFormChanges() : Observable<PanelConfig>
 	{
-		this.form.valueChanges
+		return this.form.valueChanges
 			.pipe(
 				debounceTime(1000),
-				distinctUntilChanged()
-			)
-			.subscribe((panelConfig : PanelConfig) =>
-			{
-				if (this.form.valid)
+				distinctUntilChanged(),
+				tap((panelConfig : PanelConfig) =>
 				{
-					this.panelStore.set(panelConfig);
-					this.consoleStore.reset();
-				}
-			});
+					if (this.form.valid)
+					{
+						this.panelStore.set(panelConfig);
+						this.consoleStore.reset();
+					}
+				})
+			);
 	}
 
-	protected triggerFormChanged() : void
+	protected triggerFormChange() : void
 	{
 		this.form.updateValueAndValidity();
 	}
