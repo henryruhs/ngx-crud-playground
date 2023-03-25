@@ -1,6 +1,6 @@
-<ul #list class="list-console" [scrollTop]="list.scrollHeight">
+<ul *ngIf="consoleEntries | async as consoleEntries" class="list-console" [scrollTop]="list.scrollHeight" #list >
 	<li class="item-console" *ngFor="let consoleEntry of consoleEntries">
-		<span>{{ consoleEntry.status }} {{ panelConfig.environment.method }} {{ consoleEntry.url }}</span>
+		<span *ngIf="panelConfig | async as panelConfig">{{ consoleEntry.status }} {{ panelConfig.environment.method }} {{ consoleEntry.url }}</span>
 		<span>{{ consoleEntry.time }} ms</span>
 	</li>
 </ul>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { ConsoleEntry } from './console.interface';
 
@@ -11,9 +11,9 @@ export class ConsoleStore
 {
 	protected store : BehaviorSubject<ConsoleEntry[]> = new BehaviorSubject<ConsoleEntry[]>([]);
 
-	get() : BehaviorSubject<ConsoleEntry[]>
+	get() : Observable<ConsoleEntry[]>
 	{
-		return this.store;
+		return this.store.asObservable();
 	}
 
 	reset() : void

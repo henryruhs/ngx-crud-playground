@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { PanelStore } from '../panel.store';
 import { PanelConfig } from '../panel.interface';
@@ -17,16 +18,10 @@ import { ConsoleEntry } from './console.interface';
 })
 export class ConsoleComponent
 {
-	panelConfig : PanelConfig;
-	consoleEntries : ConsoleEntry[];
+	panelConfig : Observable<PanelConfig> = this.panelStore.get();
+	consoleEntries : Observable<ConsoleEntry[]> = this.consoleStore.get();
 
 	constructor(protected panelStore : PanelStore, protected consoleStore : ConsoleStore)
 	{
-		this.panelStore
-			.get()
-			.subscribe(panelConfig => this.panelConfig = panelConfig);
-		this.consoleStore
-			.get()
-			.subscribe(consoleEntries => this.consoleEntries = consoleEntries);
 	}
 }

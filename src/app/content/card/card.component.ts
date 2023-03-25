@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnChanges, OnDestroy, ViewChild } from '@angular/core';
-import { timer, Subscription } from 'rxjs';
+import { timer, Subscription, take, tap } from 'rxjs';
 import { CustomService } from 'ngx-crud';
 
 import { PanelConfig } from '../../panel/panel.interface';
@@ -31,7 +31,12 @@ export class CardComponent implements OnChanges, OnDestroy
 	ngOnChanges() : void
 	{
 		this.reset();
-		this.timer = timer(this.panelConfig.request.delay * this.index).subscribe(() => this.load());
+		this.timer = timer(this.panelConfig.request.delay * this.index)
+			.pipe(
+				take(1),
+				tap(() => this.load())
+			)
+			.subscribe();
 	}
 
 	ngOnDestroy() : void
