@@ -24,7 +24,7 @@ describe(LoaderComponent.name, () =>
 			.compileComponents();
 	}));
 
-	it('Should create the component', () =>
+	it('should create the component', () =>
 	{
 		const fixture : ComponentFixture<LoaderComponent> = TestBed.createComponent(LoaderComponent);
 

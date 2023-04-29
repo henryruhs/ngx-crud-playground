@@ -23,7 +23,7 @@ describe(ContentComponent.name, () =>
 			.compileComponents();
 	}));
 
-	it('Should create the component', () =>
+	it('should create the component', () =>
 	{
 		const fixture : ComponentFixture<ContentComponent> = TestBed.createComponent(ContentComponent);
 

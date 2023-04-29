@@ -33,7 +33,7 @@ describe(PanelComponent.name, () =>
 			.compileComponents();
 	}));
 
-	it('Should create the component', () =>
+	it('should create the component', () =>
 	{
 		const fixture : ComponentFixture<PanelComponent> = TestBed.createComponent(PanelComponent);
 

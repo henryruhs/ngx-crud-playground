@@ -24,7 +24,7 @@ describe(CardComponent.name, () =>
 			.compileComponents();
 	}));
 
-	it('Should create the component', () =>
+	it('should create the component', () =>
 	{
 		const fixture : ComponentFixture<CardComponent> = TestBed.createComponent(CardComponent);
 
