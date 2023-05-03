@@ -120,10 +120,15 @@
 				},
 				"test":
 				{
-					"builder": "@angular-builders/jest:run",
+					"builder": "@angular-devkit/build-angular:jest",
 					"options":
 					{
-						"tsConfig": "tsconfig.spec.json"
+						"tsConfig": "tsconfig.spec.json",
+						"polyfills":
+						[
+							"zone.js",
+							"zone.js/testing"
+						]
 					}
 				},
 				"e2e":
