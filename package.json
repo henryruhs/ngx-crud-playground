@@ -38,7 +38,7 @@
 		"@angular/platform-browser-dynamic": "16.0.0",
 		"@angular/router": "16.0.0",
 		"harmonize.css": "4.2.1",
-		"ngx-crud": "13.0.1",
+		"ngx-crud": "16.0.0",
 		"rxjs": "7.8.1",
 		"rxjs-collection": "2.1.2",
 		"tslib": "2.5.0",
