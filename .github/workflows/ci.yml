@@ -7,22 +7,22 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: Checkout
-    uses: actions/checkout@v3
-  - name: Set up Node 16
-    uses: actions/setup-node@v3
+    uses: actions/checkout@v4
+  - name: Set up Node 20
+    uses: actions/setup-node@v4
     with:
-     node-version: 16
+     node-version: 20
   - run: npm install
   - run: npm run lint
  build:
   runs-on: ubuntu-latest
   steps:
   - name: Checkout
-    uses: actions/checkout@v3
-  - name: Set up Node 16
-    uses: actions/setup-node@v3
+    uses: actions/checkout@v4
+  - name: Set up Node 20
+    uses: actions/setup-node@v4
     with:
-     node-version: 16
+     node-version: 20
   - run: npm install
   - run: npm run build:prod
   - name: Upload artifact
@@ -34,22 +34,22 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: Checkout
-    uses: actions/checkout@v3
-  - name: Set up Node 16
-    uses: actions/setup-node@v3
+    uses: actions/checkout@v4
+  - name: Set up Node 20
+    uses: actions/setup-node@v4
     with:
-     node-version: 16
+     node-version: 20
   - run: npm install
   - run: npm run test
  e2e:
   runs-on: ubuntu-latest
   steps:
   - name: Checkout
-    uses: actions/checkout@v3
-  - name: Set up Node 16
-    uses: actions/setup-node@v3
+    uses: actions/checkout@v4
+  - name: Set up Node 20
+    uses: actions/setup-node@v4
     with:
-     node-version: 16
+     node-version: 20
   - run: npm install
   - run: npm run start:local &
   - run: npm run wait-for-serve && npm run e2e:local
@@ -59,7 +59,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: Checkout
-    uses: actions/checkout@v3
+    uses: actions/checkout@v4
   - name: Download artifact
     uses: actions/download-artifact@v3
     with:
@@ -79,10 +79,10 @@ jobs:
   if: github.ref == 'refs/heads/master'
   steps:
   - name: Checkout
-    uses: actions/checkout@v3
-  - name: Set up Node 16
-    uses: actions/setup-node@v3
+    uses: actions/checkout@v4
+  - name: Set up Node 20
+    uses: actions/setup-node@v4
     with:
-     node-version: 16
+     node-version: 20
   - run: npm install
   - run: xvfb-run --auto-servernum npm run e2e:prod
