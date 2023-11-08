@@ -74,17 +74,17 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"options":
 					{
-						"browserTarget": "ngx-crud-playground:build"
+						"buildTarget": "ngx-crud-playground:build"
 					},
 					"configurations":
 					{
 						"local":
 						{
-							"browserTarget": "ngx-crud-playground:build:local"
+							"buildTarget": "ngx-crud-playground:build:local"
 						},
 						"prod":
 						{
-							"browserTarget": "ngx-crud-playground:build:prod"
+							"buildTarget": "ngx-crud-playground:build:prod"
 						}
 					},
 					"defaultConfiguration": "local"
@@ -94,7 +94,7 @@
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options":
 					{
-						"browserTarget": "ngx-crud-playground:build"
+						"buildTarget": "ngx-crud-playground:build"
 					}
 				},
 				"lint":
