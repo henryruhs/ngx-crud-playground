@@ -52,7 +52,7 @@
 		"@cypress/schematic": "2.5.1",
 		"@krema/angular-eslint-stylelint-builder": "1.4.0",
 		"@isnotdefined/eslint-config": "9.8.0",
-		"@isnotdefined/stylelint-config": "6.1.0",
+		"@isnotdefined/stylelint-config": "7.0.0",
 		"@types/jest": "29.5.8",
 		"@types/node": "20.9.0",
 		"cypress": "13.4.0",
@@ -62,7 +62,7 @@
 		"jest": "29.7.0",
 		"jest-environment-jsdom": "29.7.0",
 		"postcss-scss": "4.0.9",
-		"stylelint": "15.11.0",
+		"stylelint": "16.2.1",
 		"typescript": "5.2.2",
 		"wait-on": "7.1.0"
 	},
