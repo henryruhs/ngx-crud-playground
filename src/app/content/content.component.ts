@@ -11,7 +11,8 @@ import { PanelConfig } from '../panel/panel.interface';
 	[
 		'./content.component.scss'
 	],
-	templateUrl: './content.component.html'
+	templateUrl: './content.component.html',
+	standalone: false
 })
 export class ContentComponent
 {

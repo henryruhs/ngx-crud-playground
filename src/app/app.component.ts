@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 	[
 		'./app.component.scss'
 	],
-	templateUrl: './app.component.html'
+	templateUrl: './app.component.html',
+	standalone: false
 })
 export class AppComponent
 {

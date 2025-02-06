@@ -14,7 +14,8 @@ import { ConsoleEntry } from './console.interface';
 	[
 		'./console.component.scss'
 	],
-	templateUrl: './console.component.html'
+	templateUrl: './console.component.html',
+	standalone: false
 })
 export class ConsoleComponent
 {

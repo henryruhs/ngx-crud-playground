@@ -10,7 +10,8 @@ import { Store } from 'ngx-crud/observe/observe.interface';
 	[
 		'./loader.component.scss'
 	],
-	templateUrl: './loader.component.html'
+	templateUrl: './loader.component.html',
+	standalone: false
 })
 export class LoaderComponent
 {

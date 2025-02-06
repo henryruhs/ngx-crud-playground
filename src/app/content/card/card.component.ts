@@ -13,7 +13,8 @@ import { RequestStatus } from './card.type';
 	[
 		'./card.component.scss'
 	],
-	templateUrl: './card.component.html'
+	templateUrl: './card.component.html',
+	standalone: false
 })
 export class CardComponent implements OnChanges, OnDestroy
 {
