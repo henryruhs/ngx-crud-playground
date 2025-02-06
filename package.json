@@ -29,16 +29,16 @@
 	},
 	"dependencies":
 	{
-		"@angular/animations": "17.0.0",
-		"@angular/common": "17.0.0",
-		"@angular/compiler": "17.0.0",
-		"@angular/core": "17.0.0",
-		"@angular/forms": "17.0.0",
-		"@angular/platform-browser": "17.0.0",
-		"@angular/platform-browser-dynamic": "17.0.0",
-		"@angular/router": "17.0.0",
+		"@angular/animations": "18.2.13",
+		"@angular/common": "18.2.13",
+		"@angular/compiler": "18.2.13",
+		"@angular/core": "18.2.13",
+		"@angular/forms": "18.2.13",
+		"@angular/platform-browser": "18.2.13",
+		"@angular/platform-browser-dynamic": "18.2.13",
+		"@angular/router": "18.2.13",
 		"harmonize.css": "4.2.1",
-		"ngx-crud": "17.0.0",
+		"ngx-crud": "18.0.0",
 		"rxjs": "7.8.1",
 		"rxjs-collection": "2.1.2",
 		"tslib": "2.6.2",
@@ -46,9 +46,9 @@
 	},
 	"devDependencies":
 	{
-		"@angular-devkit/build-angular": "17.0.0",
-		"@angular/cli": "17.0.0",
-		"@angular/compiler-cli": "17.0.0",
+		"@angular-devkit/build-angular": "18.2.14",
+		"@angular/cli": "18.2.14",
+		"@angular/compiler-cli": "18.2.13",
 		"@cypress/schematic": "2.5.1",
 		"@krema/angular-eslint-stylelint-builder": "1.4.0",
 		"@isnotdefined/eslint-config": "9.8.0",
@@ -63,7 +63,7 @@
 		"jest-environment-jsdom": "29.7.0",
 		"postcss-scss": "4.0.9",
 		"stylelint": "16.2.1",
-		"typescript": "5.2.2",
+		"typescript": "5.5.4",
 		"wait-on": "7.1.0"
 	},
 	"scripts":
