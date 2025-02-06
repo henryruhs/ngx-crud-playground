@@ -1,5 +1,5 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { CrudModule } from 'ngx-crud';
 
 import { CardComponent } from './card.component';
@@ -13,12 +13,15 @@ describe(CardComponent.name, () =>
 			{
 				imports:
 				[
-					CrudModule,
-					HttpClientModule
+					CrudModule
 				],
 				declarations:
 				[
 					CardComponent
+				],
+				providers:
+				[
+					provideHttpClient(withInterceptorsFromDi())
 				]
 			})
 			.compileComponents();

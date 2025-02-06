@@ -1,5 +1,5 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { CrudModule } from 'ngx-crud';
 
 import { LoaderComponent } from './loader.component';
@@ -17,8 +17,11 @@ describe(LoaderComponent.name, () =>
 				],
 				imports:
 				[
-					CrudModule,
-					HttpClientModule
+					CrudModule
+				],
+				providers:
+				[
+					provideHttpClient(withInterceptorsFromDi())
 				]
 			})
 			.compileComponents();

@@ -1,6 +1,5 @@
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { CrudModule } from 'ngx-crud';
 
 import { PanelStore } from './panel/panel.store';
@@ -30,12 +29,11 @@ describe(AppComponent.name, () =>
 				],
 				imports:
 				[
-					CrudModule,
-					HttpClientModule,
-					RouterTestingModule
+					CrudModule
 				],
 				providers:
 				[
+					provideHttpClient(withInterceptorsFromDi()),
 					ConsoleStore,
 					PanelStore
 				]
