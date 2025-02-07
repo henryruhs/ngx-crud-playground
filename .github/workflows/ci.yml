@@ -13,7 +13,8 @@ jobs:
     with:
      node-version: 22
   - run: npm install
-  - run: npm run lint
+  - run: npm run lint:script
+  - run: npm run lint:style
  build:
   runs-on: ubuntu-latest
   steps:
