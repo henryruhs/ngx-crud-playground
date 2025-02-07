@@ -8,10 +8,10 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v4
-  - name: Set up Node 20
+  - name: Set up Node 22
     uses: actions/setup-node@v4
     with:
-     node-version: 20
+     node-version: 22
   - run: npm install
   - run: npm run lint
  build:
@@ -19,10 +19,10 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v4
-  - name: Set up Node 20
+  - name: Set up Node 22
     uses: actions/setup-node@v4
     with:
-     node-version: 20
+     node-version: 22
   - run: npm install
   - run: npm run build:prod
   - name: Upload artifact
@@ -35,10 +35,10 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v4
-  - name: Set up Node 20
+  - name: Set up Node 22
     uses: actions/setup-node@v4
     with:
-     node-version: 20
+     node-version: 22
   - run: npm install
   - run: npm run test
  e2e:
@@ -46,10 +46,10 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v4
-  - name: Set up Node 20
+  - name: Set up Node 22
     uses: actions/setup-node@v4
     with:
-     node-version: 20
+     node-version: 22
   - run: npm install
   - run: npm run start:local &
   - run: npm run wait-for-serve && npm run e2e:local
@@ -80,9 +80,9 @@ jobs:
   steps:
   - name: Checkout
     uses: actions/checkout@v4
-  - name: Set up Node 20
+  - name: Set up Node 22
     uses: actions/setup-node@v4
     with:
-     node-version: 20
+     node-version: 22
   - run: npm install
   - run: xvfb-run --auto-servernum npm run e2e:prod

@@ -1,8 +1,0 @@
-{
-	"extends":
-	[
-		"@isnotdefined/eslint-config/angular",
-		"@isnotdefined/eslint-config/common",
-		"@isnotdefined/eslint-config/jest"
-	]
-}
