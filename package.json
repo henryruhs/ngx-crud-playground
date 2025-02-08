@@ -76,7 +76,7 @@
 		"build:prod": "npm run build -- --configuration prod",
 		"lint:script": "ng lint",
 		"fix:script": "npm run lint:script -- --fix",
-		"lint:style": "stylelint **/**/*.scss",
+		"lint:style": "stylelint **/**/**/*.scss",
 		"fix:style": "npm run lint:style -- --fix",
 		"test": "ng test",
 		"e2e": "ng e2e",
